@@ -1,0 +1,86 @@
+.walkthrough .row {
+  align-items: center;
+}
+.walkthrough_h2 {
+  color: $blue;
+}
+.walkthrough_h3 {
+  color: $dark-blue;
+  margin-top: 40px;
+  letter-spacing: -0.65px;
+}
+.walkthrough_text {
+  text-align: left;
+  line-height: 30px;
+  color: $blue-gray;
+}
+.walkthrough-img-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.walkthrough_image {
+  width: 400px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.walkthrough-img-container::before {
+  background-color: $off-white;
+  /* // width: 600px; */
+  height: 370px;
+  width: 100%;
+  border-radius: 6px;
+  transform: skew(5deg) rotate3d(1, 1, 0, 35deg);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.row:nth-child(odd) .walkthrough-img-container:before {
+  transform: skew(-10deg, -10deg) rotate3d(1, 1, 0, 35deg);
+}
+
+.walkthrough_setUpPaymentsBackground {
+  opacity: 10%;
+  color: $blue;
+  line-height: 90px;
+  letter-spacing: -1.5px;
+  z-index: -1;
+  position: absolute;
+  font-family: $montserrat;
+  font-weight: bold;
+  font-size: 3.75rem;
+}
+
+.walkthrough-cta {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: $blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+
+.walkthrough-cta:hover {
+  color: $blue-hover;
+}
+
+.walkthrough-cta:hover .btn-round {
+  box-shadow: 0 0 2px $blue-hover;
+  background: rgba(59, 142, 249, 0.2);
+  background-clip: padding-box;
+}
+
+.walkthrough-cta:hover .btn-round svg path {
+  fill: $blue-hover;
+}

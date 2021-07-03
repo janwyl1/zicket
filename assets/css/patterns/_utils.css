@@ -1,0 +1,46 @@
+.sr-only {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.outline-white {
+  color: transparent;
+  -webkit-text-stroke: 2px $white; 
+  /* // not ideal as doesnt support ie 11 */
+}
+
+.outline-blue {
+  color: transparent;
+  -webkit-text-stroke: 2px $blue; 
+  /* // not ideal as doesnt support ie 11 */
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.d-block {
+  display: block;
+}
+.d-flex {
+  display: flex;
+}

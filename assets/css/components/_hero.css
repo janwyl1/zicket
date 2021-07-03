@@ -1,0 +1,128 @@
+.zicket-logo {
+  background-image: url("../../dist/img/logo.svg");
+  background-repeat: no-repeat;
+  width: 133px;
+  height: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 20px;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 130px;
+  background-image: url("../../dist/img/hero.jpg");
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding: 0 16px;
+}
+
+.hero_title {
+  font-size: 4.375rem; 
+  /* 70px; */
+  text-align: center;
+  opacity: 100%;
+  color: #fff;
+  margin-bottom: 25px;
+}
+.hero_text {
+  text-align: center;
+  color: $white;
+  margin-bottom: 34px;
+}
+.hero_cta {
+  background-color: $pink;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: column;
+}
+.hero_aside {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(
+    -50%
+  ); 
+  /* // aligning this was tricky. Without this is bunches up to the left edge of the .hero element. This will shift the element left relative to its size. */
+  margin-bottom: 70px;
+}
+.hero_asideText {
+  font-size: 0.875rem;
+  line-height: 19px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+}
+.hero_asideVideo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 50px;
+  margin-right: 70px;
+  border: 6px solid transparent;
+  box-shadow: 0 0 0 2px rgba(216, 216, 216, 0.5);
+  border-radius: 6px;
+  background-clip: padding-box; 
+  /* // had to use this otherwise the transparent border would appear as pink due to the background colour */
+  display: none;
+}
+.hero_asideVideo img {
+  opacity: 0.9;
+  width: 190px;
+  transition: opacity ease 0.3s;
+}
+.hero hr {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    $white 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  height: 1px;
+  border: none;
+  opacity: 0.5;
+  margin-top: auto;
+  margin-bottom: 30px;
+}
+
+.hero_asideVideo:hover {
+  box-shadow: 0 0 0 2px rgba(216, 216, 216, 0.8);
+  transition: all ease 0.3s;
+}
+.hero_asideVideo:hover img {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) { 
+  .hero_title {
+    margin-top: 64px;
+  }
+  .hero_cta {
+    margin-bottom: 150px;
+  }
+  .hero_aside {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1024px) { 
+  .hero_asideVideo {
+    display: block;
+  }
+}

@@ -1,0 +1,23 @@
+.ribbon {
+  color: $light-purple;
+  font-size: 0.75rem;
+  text-align: center;
+  background-color: $dark-purple;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.ribbon-link {
+  color: $pink;
+  margin-left: 10px;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.ribbon-link:hover {
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}

@@ -1,0 +1,23 @@
+$blue: #3b8ef9;
+$blue-hover: #065ac6;
+$dark-blue: #2a4789;
+$blue-gray: #5a6488;
+$dark-purple: #000095;
+$dark-purple2: #27117f;
+$dark-purple3: #200d6f;
+$light-purple: #9797ff;
+$light-purple2: #b3a7e3;
+$pink: #f93b84;
+$pink-hover: #f70863;
+$white: #fff;
+$white-hover: #f2f2f2;
+$off-white: #f1f5fb;
+$light-grey: #e1e1e1;
+$black: #000;
+$carousel-shadow: rgba(31, 0, 187, 0.5);
+
+$mid-purple: #7f3fd1;
+
+body {
+  color: $blue-gray;
+}

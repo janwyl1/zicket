@@ -1,0 +1,18 @@
+.clients {
+  background: linear-gradient($mid-purple, $blue);
+  position: relative;
+  overflow: hidden;
+  color: $white;
+}
+/* Create the triangle corner effect using the border trick with 100vw */
+.clients::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 300px 40px;
+  border-color: transparent $white transparent transparent;
+  right: 0;
+  top: 0;
+  position: absolute;
+}

@@ -1,0 +1,121 @@
+/* // .carousel-logo {
+//   position: absolute;
+//   left: 50%;
+//   z-index: 12;
+//   top: 35%;
+//   width: 100px !important;
+//   height: 100px !important;
+//   transform: translate(-50%, -50%);
+// } */
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+}
+
+.swiper-slide {
+  max-width: 350px !important;
+  opacity: 0.5;
+  cursor: grab;
+}
+/* // .swiper-slide img {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// } */
+
+.swiper-slide-active {
+  opacity: 1;
+}
+.swiper-slide-active .carousel-img-container {
+  transform: scaleY(1.08);
+  transform-origin: bottom;
+}
+.swiper-slide-active .carousel-category {
+  transform: translateY(-35px);
+}
+
+.slider-buttons {
+  position: relative;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: 4px solid transparent;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+  background-clip: padding-box;
+  margin-left: 80px;
+  transition: all 0.3s ease;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  left: auto;
+  right: 80px;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.swiper-button-next:hover:after,
+.swiper-button-prev:hover:after {
+  color: $dark-purple;
+}
+
+.carousel-category {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease;
+}
+
+.carousel-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.4;
+}
+.carousel-img-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  transition: 0.2s linear;
+  transition: transform 0.5s ease;
+}
+
+.carousel-img {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 8px 16px 2px $carousel-shadow;
+  -moz-box-shadow: 0px 8px 16px 2px $carousel-shadow;
+  box-shadow: 0px 8px 16px 2px $carousel-shadow;
+}
+.carousel-logo {
+  margin-top: auto;
+  margin-bottom: auto;
+  position: absolute;
+  z-index: 12;
+  max-width: 150px;
+}

@@ -1,0 +1,41 @@
+.footer {
+  background: $dark-purple3;
+  color: $light-purple2;
+  padding-bottom: 4em;
+}
+.footer ul {
+  color: $white;
+}
+
+.footer li a {
+  color: $light-purple2;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+.footer li a:hover {
+  opacity: 0.8;
+}
+
+.footer-buy-copy {
+  font-size: 0.75rem;
+}
+
+.footer-border {
+  border: 1px solid $light-grey;
+  opacity: 0.3;
+}
+
+.footer-copyright {
+  color: $white;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+}
+
+.footer-social-icon {
+  margin-right: 25px;
+}
+
+.footer-bottom {
+  display: flex;
+}

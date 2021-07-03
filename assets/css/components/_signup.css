@@ -1,0 +1,47 @@
+.signup {
+  background-color: $dark-purple2;
+}
+
+.signup h3 {
+  color: $white;
+}
+
+.signup p {
+  color: $light-purple2;
+  font-size: 0.875rem;
+}
+.contact-form input {
+  background: transparent;
+  border-width: 0 0 2px;
+  border-color: $light-purple2;
+  color: $light-purple2;
+  padding: 17px;
+}
+
+.contact-form input::placeholder {
+  color: $light-purple2;
+}
+.contact-form input:focus {
+  border: $white;
+  color: $white;
+}
+
+.contact-form-error,
+.contact-form-success {
+  font-size: 0.75rem;
+  margin-top: 4px;
+  margin-left: 4px;
+  display: none;
+}
+.contact-form-error {
+  color: $pink;
+}
+.contact-form-success {
+  color: $blue;
+}
+
+.contact-form label {
+  font-size: 0.87rem;
+  color: $light-purple2;
+  margin-left: 4px;
+}

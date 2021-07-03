@@ -1,0 +1,50 @@
+{
+  "name": "zicket",
+  "version": "1.0.0",
+  "description": "Frontend training site",
+  "scripts": {
+    "css:dev": "postcss assets/css/main.css -o dist/css/main.css",
+    "css:prod": "NODE_ENV=production postcss assets/css/main.css -o dist/css/main.css",
+    "babel": "babel ./assets/js -d ./dist/js",
+    "browserify": "browserify ./dist/js/main.js -o ./dist/js/main.bundle.js",
+    "terser": "terser ./dist/js/main.bundle.js --compress --mangle --warn --output ./dist/js/main.min.js",
+    "cleanup": "rm ./dist/js/main.js",
+    "js:dev": "npm run babel && npm run browserify && mv ./dist/js/main.bundle.js ./dist/js/main.min.js && npm run cleanup",
+    "js:prod": "npm run babel && npm run browserify && npm run terser && npm run cleanup",
+    "deletedist": "rimraf ./dist",
+    "mkdirs": "mkdir -p ./dist/js && mkdir -p ./dist/css",
+    "prebuild": "npm run deletedist && npm run mkdirs",
+    "build:prod": "npm run prebuild && npm run js:prod && npm run css:prod && cp -R ./assets/img ./dist && cp -R ./assets/fonts ./dist && cp -R ./assets/favicon ./dist",
+    "build:dev": "npm run prebuild && npm run js:dev && npm run css:dev && cp -R ./assets/img ./dist && cp -R ./assets/fonts ./dist && cp -R ./assets/favicon ./dist",
+    "build": "npm run build:prod",
+    "serve": "http-server -p 3000",
+    "watch:css": "watch 'npm run css:dev' ./assets/css",
+    "watch:js": "watch 'npm run js:dev' ./assets/js",
+    "watch": "npm run watch:css & npm run watch:js",
+    "start": "npm run build:dev && parallelshell 'npm run serve' 'npm run watch'"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "author": "James Anwyl",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "browserify": "^17.0.0",
+    "postcss": "^7.0.35",
+    "postcss-cli": "^5.0.1",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-variables": "^1.1.1",
+    "rimraf": "^3.0.2",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.26.14",
+    "parallelshell": "3.0.1",
+    "terser": "^5.5.1"
+  }
+}
