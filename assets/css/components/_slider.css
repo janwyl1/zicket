@@ -1,13 +1,3 @@
-/* // .carousel_logo {
-//   position: absolute;
-//   left: 50%;
-//   z-index: 12;
-//   top: 35%;
-//   width: 100px !important;
-//   height: 100px !important;
-//   transform: translate(-50%, -50%);
-// } */
-
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -19,12 +9,6 @@
   opacity: 0.5;
   cursor: grab;
 }
-/* // .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// } */
 
 .swiper-slide-active {
   opacity: 1;

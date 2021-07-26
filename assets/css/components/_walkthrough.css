@@ -35,7 +35,6 @@
 
 .walkthrough_img_container::before {
   background-color: $off-white;
-  /* // width: 600px; */
   height: 370px;
   width: 100%;
   border-radius: 6px;

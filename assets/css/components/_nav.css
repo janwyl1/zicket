@@ -49,13 +49,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-  /* // .nav {
-  //   flex-direction: row;
-  //   align-items: flex-start;
-  //   justify-content: space-between;
-  // } */
   .zicket-logo {
-    /* // align-self: left; */
     margin-left: 0;
   }
   .nav {
