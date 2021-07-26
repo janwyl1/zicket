@@ -22,7 +22,7 @@
   // var nav = document.querySelector(".nav");
   var hero = document.querySelector(".hero");
   window.onscroll = function () {
-    if (document.body.scrollTop >= hero.offsetHeight) {
+    if (document.body.scrollTop >= hero.offsetHeight - 40) {
       nav.classList.add("nav-colored");
     } else {
       nav.classList.remove("nav-colored");

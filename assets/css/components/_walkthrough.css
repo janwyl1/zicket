@@ -1,8 +1,12 @@
 .walkthrough .row {
   align-items: center;
 }
+.walkthrough .row:first-child {
+  margin-bottom: 80px;
+}
 .walkthrough_h2 {
   color: $blue;
+  margin-bottom: 16px;
 }
 .walkthrough_h3 {
   color: $dark-blue;
@@ -14,7 +18,7 @@
   line-height: 30px;
   color: $blue-gray;
 }
-.walkthrough-img-container {
+.walkthrough_img_container {
   width: 100%;
   position: relative;
   display: flex;
@@ -29,7 +33,7 @@
   justify-content: center;
 }
 
-.walkthrough-img-container::before {
+.walkthrough_img_container::before {
   background-color: $off-white;
   /* // width: 600px; */
   height: 370px;
@@ -42,7 +46,7 @@
   left: 0;
   z-index: -1;
 }
-.row:nth-child(odd) .walkthrough-img-container:before {
+.row:nth-child(odd) .walkthrough_img_container:before {
   transform: skew(-10deg, -10deg) rotate3d(1, 1, 0, 35deg);
 }
 
@@ -58,7 +62,7 @@
   font-size: 3.75rem;
 }
 
-.walkthrough-cta {
+.walkthrough_cta {
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 19px;
@@ -71,16 +75,22 @@
   text-decoration: none;
 }
 
-.walkthrough-cta:hover {
+.walkthrough_cta:hover {
   color: $blue-hover;
 }
 
-.walkthrough-cta:hover .btn-round {
+.walkthrough_cta:hover .btn-round {
   box-shadow: 0 0 2px $blue-hover;
   background: rgba(59, 142, 249, 0.2);
   background-clip: padding-box;
 }
 
-.walkthrough-cta:hover .btn-round svg path {
+.walkthrough_cta:hover .btn-round svg path {
   fill: $blue-hover;
+}
+
+@media screen and (min-width: 1024px) { 
+  .walkthrough .row:first-child {
+    margin-bottom: 150px;
+  }
 }

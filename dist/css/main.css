@@ -380,6 +380,9 @@ html {
     flex-direction: column-reverse; 
     /* fix ordering on small devices (ensures that it doesn't display an image directly after another image. It keeps the image -> title -> desc order intact) */
   }
+  .walkthrough .row:first-child {
+    flex-direction: column;
+  }
   .walkthrough_image {
     width: 250px !important;
   }
@@ -499,23 +502,23 @@ h3 {
   cursor: pointer;
 }
 
-.btn-pink {
+.btn_pink {
   background-color: #f93b84;
   color: #fff;
 }
 
-.btn-pink:hover {
+.btn_pink:hover {
   background-color: #f70863;
 }
 
-.btn-outline-pink {
+.btn_outline_pink {
   border: 4px solid transparent;
   box-shadow: 0 0 0 1px #f93b84;
   background-clip: padding-box; 
   /* // had to use this otherwise the transparent border would appear as pink due to the background colour */
 }
 
-/* // .btn-outline-pink::before {
+/* // .btn_outline_pink::before {
 //   content: "";
 //   display: block;
 //   position: absolute;
@@ -526,61 +529,61 @@ h3 {
 //   height: 100%;
 // } */
 
-.btn-outline-pink:hover {
+.btn_outline_pink:hover {
   border: 4px solid transparent;
   box-shadow: 0 0 0 1px #f70863;
   background-clip: padding-box; 
   /* // had to use this otherwise the transparent border would appear as pink due to the background colour */
 }
 
-.btn-blue {
+.btn_blue {
   background-color: #3b8ef9;
   color: #fff;
 }
 
-.btn-blue:hover {
+.btn_blue:hover {
   background-color: #065ac6;
 }
 
-.btn-outline-blue {
+.btn_outline_blue {
   border: 4px solid transparent;
   box-shadow: 0 0 0 1px #3b8ef9;
   background-clip: padding-box;
 }
 
-.btn-outline-blue:hover {
+.btn_outline_blue:hover {
   box-shadow: 0 0 0 1px #065ac6;
 }
 
-.btn-white {
+.btn_white {
   background-color: #fff;
   color: #3b8ef9;
 }
 
-.btn-white:hover {
+.btn_white:hover {
   background-color: #f2f2f2;
 }
 
-.btn-outline-white {
+.btn_outline_white {
   border: 4px solid transparent;
   box-shadow: 0 0 0 1px #fff;
   background-clip: padding-box;
 }
 
-.btn-outline-white:hover {
+.btn_outline_white:hover {
   box-shadow: 0 0 0 1px #f2f2f2;
 }
 
-.btn-arrow {
+.btn_arrow {
   margin-left: 15px;
 }
 
-.btn-wide {
+.btn_wide {
   padding-left: 60px;
   padding-right: 60px;
 }
 
-.btn-view-all {
+.btn_view_all {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   border: 4px solid transparent;
@@ -588,7 +591,7 @@ h3 {
   background-clip: padding-box;
 }
 
-.btn-view-all:hover {
+.btn_view_all:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   border: 4px solid transparent;
@@ -601,7 +604,7 @@ h3 {
   transition: all ease 0.3s;
 }
 
-.btn-round {
+.btn_round {
   background: rgba(59, 142, 249, 0.2);
   color: #3b8ef9;
   padding: 5px;
@@ -617,14 +620,14 @@ h3 {
   margin-left: 20px;
 }
 
-.btn-round:hover {
+.btn_round:hover {
   box-shadow: 0 0 2px #065ac6;
   background: rgba(59, 142, 249, 0.1);
   background-clip: padding-box;
   color: #065ac6;
 }
 
-/* // .btn-round:hover svg { // need to target the parent instead
+/* // .btn_round:hover svg { // need to target the parent instead
 //   transform: translateX(2px);
 //   transition: all ease 0.3s;
 // } */
@@ -912,7 +915,7 @@ h3 {
 @media screen and (min-width: 1024px) { 
  
   .hero_aside {
-    margin-bottom: 70px;
+    margin-bottom: 32px;
   }
   .hero_aside_text {
     margin-bottom: 0;
@@ -935,8 +938,7 @@ h3 {
     left: 50%;
     transform: translateX(
       -50%
-    ); 
-    /* // aligning this was tricky. Without this is bunches up to the left edge of the .hero element. This will shift the element left relative to its size. */
+    );   /* // aligning this was tricky. Without this is bunches up to the left edge of the .hero element. This will shift the element left relative to its size. */
   }
 
  }
@@ -995,7 +997,7 @@ h3 {
   fill: #fff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   /* // .nav {
   //   flex-direction: row;
   //   align-items: flex-start;
@@ -1031,8 +1033,13 @@ h3 {
   align-items: center;
 }
 
+.walkthrough .row:first-child {
+  margin-bottom: 80px;
+}
+
 .walkthrough_h2 {
   color: #3b8ef9;
+  margin-bottom: 16px;
 }
 
 .walkthrough_h3 {
@@ -1047,7 +1054,7 @@ h3 {
   color: #5a6488;
 }
 
-.walkthrough-img-container {
+.walkthrough_img_container {
   width: 100%;
   position: relative;
   display: flex;
@@ -1063,7 +1070,7 @@ h3 {
   justify-content: center;
 }
 
-.walkthrough-img-container::before {
+.walkthrough_img_container::before {
   background-color: #f1f5fb;
   /* // width: 600px; */
   height: 370px;
@@ -1077,7 +1084,7 @@ h3 {
   z-index: -1;
 }
 
-.row:nth-child(odd) .walkthrough-img-container:before {
+.row:nth-child(odd) .walkthrough_img_container:before {
   transform: skew(-10deg, -10deg) rotate3d(1, 1, 0, 35deg);
 }
 
@@ -1093,7 +1100,7 @@ h3 {
   font-size: 3.75rem;
 }
 
-.walkthrough-cta {
+.walkthrough_cta {
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 19px;
@@ -1106,18 +1113,24 @@ h3 {
   text-decoration: none;
 }
 
-.walkthrough-cta:hover {
+.walkthrough_cta:hover {
   color: #065ac6;
 }
 
-.walkthrough-cta:hover .btn-round {
+.walkthrough_cta:hover .btn-round {
   box-shadow: 0 0 2px #065ac6;
   background: rgba(59, 142, 249, 0.2);
   background-clip: padding-box;
 }
 
-.walkthrough-cta:hover .btn-round svg path {
+.walkthrough_cta:hover .btn-round svg path {
   fill: #065ac6;
+}
+
+@media screen and (min-width: 1024px) { 
+  .walkthrough .row:first-child {
+    margin-bottom: 150px;
+  }
 }
 
 .clients {
@@ -1237,7 +1250,7 @@ h3 {
   display: flex;
 }
 
-/* // .carousel-logo {
+/* // .carousel_logo {
 //   position: absolute;
 //   left: 50%;
 //   z-index: 12;
@@ -1270,12 +1283,12 @@ h3 {
   opacity: 1;
 }
 
-.swiper-slide-active .carousel-img-container {
+.swiper-slide-active .carousel_img_container {
   transform: scaleY(1.08);
   transform-origin: bottom;
 }
 
-.swiper-slide-active .carousel-category {
+.swiper-slide-active .carousel_category {
   transform: translateY(-35px);
 }
 
@@ -1326,7 +1339,7 @@ h3 {
   color: #000095;
 }
 
-.carousel-category {
+.carousel_category {
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -1334,13 +1347,13 @@ h3 {
   transition: transform 0.5s ease;
 }
 
-.carousel-title {
+.carousel_title {
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.4;
 }
 
-.carousel-img-container {
+.carousel_img_container {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -1348,7 +1361,7 @@ h3 {
   transition: transform 0.5s ease;
 }
 
-.carousel-img {
+.carousel_img {
   position: relative;
   width: 100%;
   border-radius: 5px;
@@ -1357,7 +1370,7 @@ h3 {
   box-shadow: 0px 8px 16px 2px rgba(31, 0, 187, 0.5);
 }
 
-.carousel-logo {
+.carousel_logo {
   margin-top: auto;
   margin-bottom: auto;
   position: absolute;

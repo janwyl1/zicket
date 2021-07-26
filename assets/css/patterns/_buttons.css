@@ -10,79 +10,70 @@
   cursor: pointer;
 }
 
-.btn-pink {
+.btn_pink {
   background-color: $pink;
   color: $white;
 }
-.btn-pink:hover {
+.btn_pink:hover {
   background-color: $pink-hover;
 }
-.btn-outline-pink {
+.btn_outline_pink {
   border: 4px solid transparent;
   box-shadow: 0 0 0 1px $pink;
   background-clip: padding-box; 
   /* // had to use this otherwise the transparent border would appear as pink due to the background colour */
 }
-/* // .btn-outline-pink::before {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   background-color: blue;
-//   width: 100%;
-//   height: 100%;
-// } */
-.btn-outline-pink:hover {
+
+.btn_outline_pink:hover {
   border: 4px solid transparent;
   box-shadow: 0 0 0 1px $pink-hover;
   background-clip: padding-box; 
   /* // had to use this otherwise the transparent border would appear as pink due to the background colour */
 }
 
-.btn-blue {
+.btn_blue {
   background-color: $blue;
   color: $white;
 }
 
-.btn-blue:hover {
+.btn_blue:hover {
   background-color: $blue-hover;
 }
-.btn-outline-blue {
+.btn_outline_blue {
   border: 4px solid transparent;
   box-shadow: 0 0 0 1px $blue;
   background-clip: padding-box;
 }
-.btn-outline-blue:hover {
+.btn_outline_blue:hover {
   box-shadow: 0 0 0 1px $blue-hover;
 }
 
-.btn-white {
+.btn_white {
   background-color: $white;
   color: $blue;
 }
-.btn-white:hover {
+.btn_white:hover {
   background-color: $white-hover;
 }
-.btn-outline-white {
+.btn_outline_white {
   border: 4px solid transparent;
   box-shadow: 0 0 0 1px $white;
   background-clip: padding-box;
 }
-.btn-outline-white:hover {
+.btn_outline_white:hover {
   box-shadow: 0 0 0 1px $white-hover;
 }
 
-.btn-arrow {
+.btn_arrow {
   margin-left: 15px;
 }
 
-.btn-wide {
+.btn_wide {
   padding-left: 60px;
   padding-right: 60px;
 }
 
-.btn-view-all {
+.btn_view_all {
   background: rgba(255, 255, 255, 0.2);
   color: $white;
   border: 4px solid transparent;
@@ -90,7 +81,7 @@
   background-clip: padding-box;
 }
 
-.btn-view-all:hover {
+.btn_view_all:hover {
   background: rgba(255, 255, 255, 0.1);
   color: $white;
   border: 4px solid transparent;
@@ -102,7 +93,7 @@
   transition: all ease 0.3s;
 }
 
-.btn-round {
+.btn_round {
   background: rgba(59, 142, 249, 0.2);
   color: $blue;
   padding: 5px;
@@ -117,16 +108,12 @@
   justify-content: center;
   margin-left: 20px;
 }
-.btn-round:hover {
+.btn_round:hover {
   box-shadow: 0 0 2px $blue-hover;
   background: rgba(59, 142, 249, 0.1);
   background-clip: padding-box;
   color: $blue-hover;
 }
-/* // .btn-round:hover svg { // need to target the parent instead
-//   transform: translateX(2px);
-//   transition: all ease 0.3s;
-// } */
 
 .btn:disabled {
   display: none;

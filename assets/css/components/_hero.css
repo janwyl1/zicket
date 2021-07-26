@@ -110,7 +110,7 @@
 @media screen and (min-width: 1024px) { 
  
   .hero_aside {
-    margin-bottom: 70px;
+    margin-bottom: 32px;
   }
   .hero_aside_text {
     margin-bottom: 0;
@@ -133,8 +133,7 @@
     left: 50%;
     transform: translateX(
       -50%
-    ); 
-    /* // aligning this was tricky. Without this is bunches up to the left edge of the .hero element. This will shift the element left relative to its size. */
+    );   /* // aligning this was tricky. Without this is bunches up to the left edge of the .hero element. This will shift the element left relative to its size. */
   }
 
  }

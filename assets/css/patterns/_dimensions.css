@@ -209,6 +209,9 @@ html {
     flex-direction: column-reverse; 
     /* fix ordering on small devices (ensures that it doesn't display an image directly after another image. It keeps the image -> title -> desc order intact) */
   }
+  .walkthrough .row:first-child {
+    flex-direction: column;
+  }
   .walkthrough_image {
     width: 250px !important;
   }
