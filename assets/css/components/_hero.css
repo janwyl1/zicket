@@ -21,7 +21,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  padding: 0 16px;
+  padding: 200px 16px 0 16px;
 }
 
 .hero_title {
@@ -124,5 +124,8 @@
 @media screen and (min-width: 1024px) { 
   .hero_asideVideo {
     display: block;
+  }
+  .hero {
+    padding-top: 0;
   }
 }

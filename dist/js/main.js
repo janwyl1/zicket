@@ -1,24 +1,22 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-"use strict";
-
-!function () {
+!(function () {
   "use strict";
   // Toggle burger menu
   // function showNavItems() {
   //   console.log("show nav items")
   //   const nav = document.querySelector('.nav');
-
+    
   //   nav.classList.add('d-flex', '.nav-colored')
   // }
-
+  
   // document.querySelector('.js-nav-burger').addEventListener('click', showNavItems);
+  
+  const nav = document.querySelector(".nav");
+  const navBurger = nav.querySelector('.js-nav-burger')
+  navBurger.addEventListener('click', e => {
+    console.log("blah")
+    nav.classList.toggle('d-flex')
+  })
 
-  var nav = document.querySelector(".nav");
-  var navBurger = nav.querySelector('.js-nav-burger');
-  navBurger.addEventListener('click', function (e) {
-    console.log("blah");
-    nav.classList.toggle('d-flex');
-  });
 
   // Display nav bg on scroll
   // var nav = document.querySelector(".nav");
@@ -31,6 +29,12 @@
     }
   };
 
+    
+
+
+
+
+
   // Carousel config
   var swiper = new Swiper(".clientSwiper", {
     spaceBetween: 15,
@@ -38,19 +42,22 @@
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    }
+      prevEl: ".swiper-button-prev",
+    },
   });
+
 
   // Open hero video in modal
   MediaBox(".mediabox");
 
   // Attach newsletter form submission handler
   window.addEventListener("load", function () {
-    document.querySelector(".contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      submitNewsletterForm();
-    });
+    document
+      .querySelector(".contact-form")
+      .addEventListener("submit", function (e) {
+        e.preventDefault();
+        submitNewsletterForm();
+      });
   });
 
   // Send Mail
@@ -62,13 +69,19 @@
     var emailInput = document.getElementById("email");
     var xhttp = new XMLHttpRequest();
 
-    xhttp.open("POST", "https://frontend-trial-api.qa.parallax.dev/api/newsletter", true);
+    xhttp.open(
+      "POST",
+      "https://frontend-trial-api.qa.parallax.dev/api/newsletter",
+      true
+    );
 
     xhttp.setRequestHeader("Content-type", "application/json");
 
-    xhttp.send(JSON.stringify({
-      email: emailAddr
-    }));
+    xhttp.send(
+      JSON.stringify({
+        email: emailAddr,
+      })
+    );
 
     xhttp.onload = function () {
       var res = JSON.parse(this.responseText);
@@ -79,7 +92,9 @@
         submitBtn.disabled = true;
         emailInput.disabled = true;
       } else {
-        errorMsg.innerHTML = res.errors.email ? res.errors.email : "There was an unexpected failure";
+        errorMsg.innerHTML = res.errors.email
+          ? res.errors.email
+          : "There was an unexpected failure";
         successMsg.classList.remove("d-block");
         errorMsg.classList.add("d-block");
       }
@@ -91,5 +106,4 @@
       errorMsg.classList.add("d-block");
     };
   }
-}();
-},{}]},{},[1]);
+})();

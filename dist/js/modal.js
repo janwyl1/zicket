@@ -1,21 +1,16 @@
-'use strict';
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 (function (root, factory) {
     "use strict";
-
     if (typeof define === 'function' && define.amd) {
         define([], factory);
-    } else if ((typeof exports === 'undefined' ? 'undefined' : _typeof(exports)) === 'object') {
+    } else if (typeof exports === 'object') {
         module.exports = factory();
     } else {
         root.MediaBox = factory();
     }
-})(undefined, function () {
+}(this, function () {
     "use strict";
 
-    var MediaBox = function MediaBox(element, params) {
+    var MediaBox = function (element, params) {
         var default_params = { autoplay: '1' },
             params = params || 0;
 
@@ -29,12 +24,12 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
         this.params = Object.assign(default_params, params);
         this.selector = element instanceof NodeList ? element : document.querySelectorAll(element);
-        this.root = document.querySelector('body');
+        this.root     = document.querySelector('body');
         this.run();
     };
 
     MediaBox.prototype = {
-        run: function run() {
+        run: function () {
             Array.prototype.forEach.call(this.selector, function (el) {
                 el.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -51,7 +46,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 }
             }.bind(this), false);
         },
-        template: function template(s, d) {
+        template: function (s, d) {
             var p;
 
             for (p in d) {
@@ -61,25 +56,27 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             }
             return s;
         },
-        parseUrl: function parseUrl(url) {
+        parseUrl: function (url) {
             var service = {},
                 matches;
 
             if (matches = url.match(/^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/)) {
                 service.provider = "youtube";
-                service.id = matches[2];
+                service.id       = matches[2];
             } else if (matches = url.match(/https?:\/\/(?:www\.)?vimeo.com\/(?:channels\/|groups\/([^\/]*)\/videos\/|album\/(\d+)\/video\/|)(\d+)(?:$|\/|\?)/)) {
                 service.provider = "vimeo";
-                service.id = matches[3];
+                service.id       = matches[3];
             } else {
                 service.provider = "Unknown";
-                service.id = '';
+                service.id       = '';
             }
 
             return service;
         },
-        render: function render(service) {
-            var embedLink, lightbox, urlParams;
+        render: function (service) {
+            var embedLink,
+                lightbox,
+                urlParams;
 
             if (service.provider === 'youtube') {
                 embedLink = 'https://www.youtube.com/embed/' + service.id;
@@ -91,39 +88,40 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             urlParams = this.serialize(this.params);
 
-            lightbox = this.template('<div class="mediabox-wrap" role="dialog" aria-hidden="false"><div class="mediabox-content" role="document" tabindex="0"><span id="mediabox-esc" class="mediabox-close" aria-label="close" tabindex="1"></span><iframe src="{embed}{params}" frameborder="0" allowfullscreen></iframe></div></div>', {
-                embed: embedLink,
-                params: urlParams
-            });
+            lightbox = this.template(
+                '<div class="mediabox-wrap" role="dialog" aria-hidden="false"><div class="mediabox-content" role="document" tabindex="0"><span id="mediabox-esc" class="mediabox-close" aria-label="close" tabindex="1"></span><iframe src="{embed}{params}" frameborder="0" allowfullscreen></iframe></div></div>', {
+                    embed: embedLink,
+                    params: urlParams
+                });
 
             this.lastFocusElement = document.activeElement;
             this.root.insertAdjacentHTML('beforeend', lightbox);
             document.body.classList.add('stop-scroll');
         },
-        events: function events() {
+        events: function () {
             var wrapper = document.querySelector('.mediabox-wrap');
             var content = document.querySelector('.mediabox-content');
 
             wrapper.addEventListener('click', function (e) {
-                if (e.target && e.target.nodeName === 'SPAN' && e.target.className === 'mediabox-close' || e.target.nodeName === 'DIV' && e.target.className === 'mediabox-wrap' || e.target.className === 'mediabox-content' && e.target.nodeName !== 'IFRAME') {
+                if (e.target && e.target.nodeName === 'SPAN' && e.target.className === 'mediabox-close' || e.target.nodeName === 'DIV' && e.target.className === 'mediabox-wrap' || (e.target.className === 'mediabox-content' && e.target.nodeName !== 'IFRAME')) {
                     this.close(wrapper);
                 }
             }.bind(this), false);
 
-            document.addEventListener('focus', function (e) {
+            document.addEventListener('focus', function(e) {
                 if (content && !content.contains(e.target)) {
                     e.stopPropagation();
                     content.focus();
                 }
             }, true);
 
-            content.addEventListener('keypress', function (e) {
+            content.addEventListener('keypress', function(e) {
                 if (e.keyCode === 13) {
                     this.close(wrapper);
                 }
             }.bind(this), false);
         },
-        close: function close(el) {
+        close: function (el) {
             if (el === null) return true;
             var timer = null;
 
@@ -133,7 +131,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             el.classList.add('mediabox-hide');
 
-            timer = setTimeout(function () {
+            timer = setTimeout(function() {
                 var el = document.querySelector('.mediabox-wrap');
                 if (el !== null) {
                     document.body.classList.remove('stop-scroll');
@@ -142,15 +140,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 }
             }.bind(this), 500);
         },
-        serialize: function serialize(obj) {
-            return '?' + Object.keys(obj).reduce(function (a, k) {
-                a.push(k + '=' + encodeURIComponent(obj[k]));return a;
-            }, []).join('&');
+        serialize: function (obj) {
+            return '?'+Object.keys(obj).reduce(function(a,k){a.push(k+'='+encodeURIComponent(obj[k]));return a},[]).join('&')
         }
     };
 
     return MediaBox;
-});
+}));
 
 /**
  * Object.assign polyfill for IE support
@@ -159,31 +155,27 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 if (typeof Object.assign != 'function') {
     // Must be writable: true, enumerable: false, configurable: true
     Object.defineProperty(Object, "assign", {
-        value: function assign(target, varArgs) {
-            // .length of function is 2
-            'use strict';
+        value: function assign(target, varArgs) { // .length of function is 2
+        'use strict';
+        if (target == null) { // TypeError if undefined or null
+            throw new TypeError('Cannot convert undefined or null to object');
+        }
 
-            if (target == null) {
-                // TypeError if undefined or null
-                throw new TypeError('Cannot convert undefined or null to object');
-            }
+        var to = Object(target);
 
-            var to = Object(target);
+        for (var index = 1; index < arguments.length; index++) {
+            var nextSource = arguments[index];
 
-            for (var index = 1; index < arguments.length; index++) {
-                var nextSource = arguments[index];
-
-                if (nextSource != null) {
-                    // Skip over if undefined or null
-                    for (var nextKey in nextSource) {
-                        // Avoid bugs when hasOwnProperty is shadowed
-                        if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-                            to[nextKey] = nextSource[nextKey];
-                        }
-                    }
+            if (nextSource != null) { // Skip over if undefined or null
+            for (var nextKey in nextSource) {
+                // Avoid bugs when hasOwnProperty is shadowed
+                if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                to[nextKey] = nextSource[nextKey];
                 }
             }
-            return to;
+            }
+        }
+        return to;
         },
         writable: true,
         configurable: true

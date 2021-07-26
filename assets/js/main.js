@@ -29,12 +29,6 @@
     }
   };
 
-    
-
-
-
-
-
   // Carousel config
   var swiper = new Swiper(".clientSwiper", {
     spaceBetween: 15,
