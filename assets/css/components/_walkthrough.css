@@ -35,7 +35,7 @@
 
 .walkthrough_img_container::before {
   background-color: $off-white;
-  height: 370px;
+  height: 90%;
   width: 100%;
   border-radius: 6px;
   transform: skew(5deg) rotate3d(1, 1, 0, 35deg);
@@ -87,6 +87,7 @@
 .walkthrough_cta:hover .btn-round svg path {
   fill: $blue-hover;
 }
+
 
 @media screen and (min-width: 1024px) { 
   .walkthrough .row:first-child {

@@ -135,16 +135,6 @@ table {
   border-spacing: 0;
 }
 
-/* // .row {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-// }
-// @media only screen and (max-width: 992px) {
-//   .row {
-//     grid-template-columns: 1fr;
-//   }
-// } */
-
 /* $xxs: '320px';
 $xs: '500px';
 $sm: '640px';
@@ -389,11 +379,6 @@ html {
   .walkthrough-img-container::before {
     height: 220px !important;
   }
-  /* // .footer-links {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   flex-direction: row;
-  // } */
   .footer-links .row {
     flex-direction: row;
     flex-wrap: wrap;
@@ -432,9 +417,6 @@ html {
   .mt-xs-300 {
     margin-top: 300px;
   }
-  /* // .mb-xs-10 {
-  //   margin-bottom: 10px;
-  // } */
   .mb-xs-30 {
     margin-bottom: 30px;
   }
@@ -517,17 +499,6 @@ h3 {
   background-clip: padding-box; 
   /* // had to use this otherwise the transparent border would appear as pink due to the background colour */
 }
-
-/* // .btn_outline_pink::before {
-//   content: "";
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   background-color: blue;
-//   width: 100%;
-//   height: 100%;
-// } */
 
 .btn_outline_pink:hover {
   border: 4px solid transparent;
@@ -626,11 +597,6 @@ h3 {
   background-clip: padding-box;
   color: #065ac6;
 }
-
-/* // .btn_round:hover svg { // need to target the parent instead
-//   transform: translateX(2px);
-//   transition: all ease 0.3s;
-// } */
 
 .btn:disabled {
   display: none;
@@ -817,7 +783,6 @@ h3 {
   background-position: center;
   background-size: cover;
   position: relative;
-  /* padding: 200px 16px 0 16px; */
   padding: 96px 16px 0 16px;
 }
 
@@ -855,6 +820,10 @@ h3 {
   flex-direction: column;
   justify-content: center;
   flex-flow: column;
+}
+
+.hero_aside {
+  margin-bottom: 32px;
 }
 
 .hero_aside_text {
@@ -905,6 +874,12 @@ h3 {
   opacity: 1;
 }
 
+/* @media screen and (min-width: 500px) {
+  .hero_aside_text {
+    margin-bottom: 64px;
+  }
+} */
+
 @media screen and (min-width: 768px) {
   .hero_title {
     font-size: 4.375rem;  /* 70px; */
@@ -912,19 +887,19 @@ h3 {
 
 }
 
-@media screen and (min-width: 1024px) { 
- 
+/* @media screen and (min-width: 1024px) { 
   .hero_aside {
     margin-bottom: 32px;
   }
-  .hero_aside_text {
-    margin-bottom: 0;
-  }
-}
+
+} */
 
 @media screen and (min-width: 1280px) { 
   .hero {
     padding-top: 0;
+  }
+  .hero_aside_text {
+    margin-bottom: 0;
   }
   .hero_aside_video {
     position: absolute;
@@ -946,11 +921,15 @@ h3 {
 .nav {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
   z-index: 99;
   transition: background-color 200ms linear;
+  padding: 8px 16px;
+  height: 80px;
+  align-items: center;
+  z-index: 2;
 }
 
 .nav-colored {
@@ -959,73 +938,101 @@ h3 {
 }
 
 .nav__list {
-  display: flex;
+  display: none;
   flex-flow: wrap;
   justify-content: space-around;
-  flex-direction: row;
+  flex-direction: column;
   margin: auto;
   font-size: 0.875rem;
   color: #fff;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #27117f;
+  box-shadow: 0 5px 5px -5px #333;
+
 }
 
-.nav__list-item {
+.nav__list_item {
   display: inline;
-  margin-right: 43px;
+  padding: 8px 0 8px 16px;
+  /* margin-right: 43px; */
 }
 
-.nav__list-item a {
+.nav__list_item a {
   color: #fff;
   text-decoration: none;
 }
 
-.nav__list-item a:hover {
+.nav__list_item a:hover {
   opacity: 0.9;
 }
 
-.get-zicket {
+.nav__list_item:last-child {
+  background: #f93b84;
+}
+
+.get-zicket-btn {
   font-size: 0.75rem;
   color: #fff;
   text-transform: uppercase;
   margin-right: 30px;
   margin-bottom: 10px;
-}
-
-.nav__burger {
   display: none;
-  background: none;
-  border: none;
-  fill: #fff;
 }
-
-@media screen and (max-width: 1024px) {
-  /* // .nav {
-  //   flex-direction: row;
-  //   align-items: flex-start;
-  //   justify-content: space-between;
-  // } */
-  .zicket-logo {
-    /* // align-self: left; */
-    margin-left: 0;
-  }
-  .nav {
-    justify-content: space-between;
-    padding: 8px 16px;
-  }
-  .nav ul {
-    flex-direction: column;
-    justify-content: center;
-    display: none;
-  }
-  .get-zicket {
-    display: flex;
-    width: 100%;
-    display: none;
-  }
 
 .nav__burger {
   display: flex;
   margin-left: auto;
+  background: none;
+  border: none;
+  fill: #fff;
+  align-self: center;
 }
+
+.nav-overlay{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color:rgba(0,0,0,0.5);
+	z-index:1;
+	opacity:0;
+	visibility:hidden;
+  min-height: 100%;
+}
+
+.nav-overlay.active{
+	opacity:1;
+	visibility:visible;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__burger {
+    display: none;
+  }
+
+  .get-zicket-btn {
+    display: flex;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    width: auto;
+    box-shadow: none;
+  }
+  .nav__list_item {
+    margin-right: 43px;
+  }
+
+  .nav__list_item:last-child {
+    display: none;
+   }
   
 }
 
@@ -1072,8 +1079,7 @@ h3 {
 
 .walkthrough_img_container::before {
   background-color: #f1f5fb;
-  /* // width: 600px; */
-  height: 370px;
+  height: 90%;
   width: 100%;
   border-radius: 6px;
   transform: skew(5deg) rotate3d(1, 1, 0, 35deg);
@@ -1250,16 +1256,6 @@ h3 {
   display: flex;
 }
 
-/* // .carousel_logo {
-//   position: absolute;
-//   left: 50%;
-//   z-index: 12;
-//   top: 35%;
-//   width: 100px !important;
-//   height: 100px !important;
-//   transform: translate(-50%, -50%);
-// } */
-
 .swiper-container {
   width: 100%;
   height: 100%;
@@ -1271,13 +1267,6 @@ h3 {
   opacity: 0.5;
   cursor: grab;
 }
-
-/* // .swiper-slide img {
-//   display: block;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// } */
 
 .swiper-slide-active {
   opacity: 1;

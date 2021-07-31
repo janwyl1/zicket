@@ -1,33 +1,27 @@
 !(function () {
   "use strict";
-  // Toggle burger menu
-  // function showNavItems() {
-  //   console.log("show nav items")
-  //   const nav = document.querySelector('.nav');
-    
-  //   nav.classList.add('d-flex', '.nav-colored')
-  // }
-  
-  // document.querySelector('.js-nav-burger').addEventListener('click', showNavItems);
-  
-  const nav = document.querySelector(".nav");
-  const navBurger = nav.querySelector('.js-nav-burger')
+  // Toggle burger menu 
+  const nav = document.querySelector('.nav');
+  const navItems = document.querySelector(".nav__list");
+  const navBurger = document.querySelector('.js-nav-burger')
+  const navOverlay = document.querySelector('.nav-overlay')
   navBurger.addEventListener('click', e => {
-    console.log("blah")
-    nav.classList.toggle('d-flex')
+    navItems.classList.toggle('d-flex')
+    navOverlay.classList.toggle('active')
+    nav.classList.add("nav-colored");
   })
 
 
-  // Display nav bg on scroll
-  // var nav = document.querySelector(".nav");
-  var hero = document.querySelector(".hero");
+  // Display nav bg on scroll  
+  const hero = document.querySelector(".hero");
+  
   window.onscroll = function () {
-    if (document.body.scrollTop >= hero.offsetHeight - 40) {
-      nav.classList.add("nav-colored");
-    } else {
-      nav.classList.remove("nav-colored");
+    // if (!nav.classList.contains("nav-colored")) {
+      if (document.body.scrollTop >= hero.offsetHeight - 40) {
+        nav.classList.add("nav-colored");
+      } 
+    //}
     }
-  };
 
   // Carousel config
   var swiper = new Swiper(".clientSwiper", {

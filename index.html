@@ -34,24 +34,26 @@
         </a>
 
         <ul class="nav__list">
-          <li class="nav__list-item"><a href="#">About</a></li>
-          <li class="nav__list-item"><a href="#">Features</a></li>
-          <li class="nav__list-item"><a href="#">Clients</a></li>
-          <li class="nav__list-item"><a href="#">News</a></li>
-          <li class="nav__list-item"><a href="#">FAQ</a></li>
+          <li class="nav__list_item"><a href="#">About</a></li>
+          <li class="nav__list_item"><a href="#">Features</a></li>
+          <li class="nav__list_item"><a href="#">Clients</a></li>
+          <li class="nav__list_item"><a href="#">News</a></li>
+          <li class="nav__list_item"><a href="#">FAQ</a></li>
+          <li class="nav__list_item"><a href="#">Get Zicket</a></li>
         </ul>
-        <button class="nav__burger | js-nav-burger">
+        
+        <button class="nav__burger | js-nav-burger" aria-label="Menu">
           <svg viewBox="0 0 100 80" width="40" height="40">
             <rect width="100" height="15" rx="8"></rect>
             <rect y="30" width="100" height="15" rx="8"></rect>
             <rect y="60" width="100" height="15" rx="8"></rect>
           </svg>
         </button>
-
         <div>
-          <a href="#" class="get-zicket btn btn_pink  mt-10">Get Zicket</a>
+          <a href="#" class="get-zicket-btn btn btn_pink mt-10">Get Zicket</a>
         </div>
       </nav>
+      <div class="nav-overlay"></div>
     </header>
 
     <main class="" id="main">
@@ -83,20 +85,19 @@
                 /></svg
             ></a>
           </div>
-
-          <div class="hero_aside">
-            <div class="hero_aside_text">
-              <hr />
-              Over <span class="bold">3,000,000 Tickets</span> Sold at some of
-              Asia's Top Events Last Year
-            </div>
-          </div>
           <div class="hero_aside_video">
             <a
               href="https://www.youtube.com/watch?v=2uAVk1frFMI"
               class="mediabox"
               ><img src="dist/img/hero-video-thumb.png" alt="Watch the video"
             /></a>
+          </div>
+          <div class="hero_aside">
+            <div class="hero_aside_text">
+              <hr />
+              Over <span class="bold">3,000,000 Tickets</span> Sold at some of
+              Asia's Top Events Last Year
+            </div>
           </div>
         </div>
       </section>
