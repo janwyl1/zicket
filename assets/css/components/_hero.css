@@ -30,6 +30,7 @@
   opacity: 100%;
   color: #fff;
   margin-bottom: 25px;
+  max-width: 755px;
 }
 .hero_text {
   text-align: center;
@@ -102,24 +103,12 @@
   opacity: 1;
 }
 
-/* @media screen and (min-width: 500px) {
-  .hero_aside_text {
-    margin-bottom: 64px;
-  }
-} */
-
 @media screen and (min-width: 768px) {
   .hero_title {
     font-size: 4.375rem;  /* 70px; */
   }
 
 }
-/* @media screen and (min-width: 1024px) { 
-  .hero_aside {
-    margin-bottom: 32px;
-  }
-
-} */
 
 @media screen and (min-width: 1280px) { 
   .hero {
