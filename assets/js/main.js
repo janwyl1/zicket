@@ -1,27 +1,28 @@
 !(function () {
   "use strict";
-  // Toggle burger menu 
+  // Navbar
   const nav = document.querySelector('.nav');
   const navItems = document.querySelector(".nav__list");
   const navBurger = document.querySelector('.js-nav-burger')
-  const navOverlay = document.querySelector('.nav-overlay')
+  const navOverlay = document.querySelector('.nav__overlay')
+  const hero = document.querySelector(".hero");
+
+  // Display nav bg on scroll  
+  window.onscroll = function () {
+      // if (document.body.scrollTop >= hero.offsetHeight - 40) {
+        nav.classList.add("nav-colored");
+      // } 
+      if (document.body.scrollTop === 0 && !navOverlay.classList.contains('active')) {
+        nav.classList.remove("nav-colored")
+      }
+    }
+
+  // Toggle burger menu 
   navBurger.addEventListener('click', e => {
     navItems.classList.toggle('d-flex')
     navOverlay.classList.toggle('active')
     nav.classList.add("nav-colored");
   })
-
-
-  // Display nav bg on scroll  
-  const hero = document.querySelector(".hero");
-  
-  window.onscroll = function () {
-    // if (!nav.classList.contains("nav-colored")) {
-      if (document.body.scrollTop >= hero.offsetHeight - 40) {
-        nav.classList.add("nav-colored");
-      } 
-    //}
-    }
 
   // Carousel config
   var swiper = new Swiper(".clientSwiper", {
@@ -33,7 +34,6 @@
       prevEl: ".swiper-button-prev",
     },
   });
-
 
   // Open hero video in modal
   MediaBox(".mediabox");

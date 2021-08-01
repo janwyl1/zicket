@@ -45,3 +45,30 @@
   color: $light-purple2;
   margin-left: 4px;
 }
+
+
+/* @media screen and (max-width: 768px) { 
+  .contact-form .col{
+    width: 100%
+  }
+  .contact-form .col:last-child {
+    width: 100%;
+  }
+} */
+
+@media screen and (min-width: 768px) {
+  .contact-form .col{
+    width: 60%;
+  }
+  .contact-form .col:last-child {
+    width: 40%;
+  }
+}
+/* @media screen and (min-width: 1024px) {
+  .contact-form .col{
+    width: 100%;
+  }
+  .contact-form .col:last-child {
+    width: 100%;
+  }
+} */

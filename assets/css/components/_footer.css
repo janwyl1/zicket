@@ -11,9 +11,10 @@
   color: $light-purple2;
   text-decoration: none;
   font-size: 0.875rem;
+  opacity: 0.9
 }
 .footer li a:hover {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .footer-buy-copy {
@@ -34,6 +35,10 @@
 
 .footer-social-icon {
   margin-right: 25px;
+  opacity: 0.9
+}
+.footer-social-icon:hover {
+  opacity: 1;
 }
 
 .footer-bottom {

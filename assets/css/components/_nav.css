@@ -7,13 +7,14 @@
   z-index: 99;
   transition: background-color 200ms linear;
   padding: 8px 16px;
-  height: 80px;
+  min-height: 80px;
   align-items: center;
-  z-index: 2;
+  z-index: 99;
 }
 
 .nav-colored {
   background-color: $dark-purple2 !important;
+  border-bottom: 1px solid $dark-purple3;
   margin-top: -42px;
 }
 
@@ -31,22 +32,34 @@
   width: 100%;
   background-color: $dark-purple2;
   box-shadow: 0 5px 5px -5px #333;
+  /* padding-left: 16px; */
 
 }
 .nav__list_item {
   display: inline;
-  padding: 8px 0 8px 16px;
+  /* padding: 8px 0; */
   /* margin-right: 43px; */
+  
 }
 .nav__list_item a {
   color: $white;
   text-decoration: none;
-}
-.nav__list_item a:hover {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 8px 0 8px 16px;
   opacity: 0.9;
 }
+.nav__list_item a:hover {
+  opacity: 1;
+  background: $dark-purple3;
+}
+
 .nav__list_item:last-child {
   background: $pink;
+}
+.nav__list_item:last-child:hover a{
+  background: $pink-hover;
 }
 
 .get-zicket-btn {
@@ -65,9 +78,10 @@
   border: none;
   fill: $white;
   align-self: center;
+  cursor: pointer;
 }
 
-.nav-overlay{
+.nav__overlay{
 	position:fixed;
 	top:0;
 	right:0;
@@ -79,7 +93,7 @@
 	visibility:hidden;
   min-height: 100%;
 }
-.nav-overlay.active{
+.nav__overlay.active{
 	opacity:1;
 	visibility:visible;
 }
@@ -109,5 +123,23 @@
   .nav__list_item:last-child {
     display: none;
    }
+
+   .nav__list_item a { 
+    width: auto;
+    height: auto;
+    display: flex;
+   }
+
+   .nav__list_item a:hover {
+    background: none;
+  }
+  .nav__list_item:last-child:hover a{
+    background: none;
+  }
+
+  .nav__overlay.active{
+    opacity:0;
+    visibility:invisible;
+  }
   
 }
