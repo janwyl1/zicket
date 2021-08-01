@@ -72,20 +72,21 @@
   flex-direction: row;
   align-items: center;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .walkthrough_cta:hover {
   color: $blue-hover;
 }
 
-.walkthrough_cta:hover .btn-round {
-  box-shadow: 0 0 2px $blue-hover;
-  background: rgba(59, 142, 249, 0.2);
-  background-clip: padding-box;
+.walkthrough_cta:hover .btn_round {
+  box-shadow: none;
+  background-color: $blue-hover;
+  color: $blue-hover;
 }
 
-.walkthrough_cta:hover .btn-round svg path {
-  fill: $blue-hover;
+.walkthrough_cta:hover .btn_round svg path {
+  fill: $white;
 }
 
 

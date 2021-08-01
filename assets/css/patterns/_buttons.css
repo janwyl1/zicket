@@ -108,12 +108,7 @@
   align-items: center;
   justify-content: center;
   margin-left: 20px;
-}
-.btn_round:hover {
-  box-shadow: 0 0 2px $blue-hover;
-  background: rgba(59, 142, 249, 0.1);
-  background-clip: padding-box;
-  color: $blue-hover;
+  transition: all 0.3s ease;
 }
 
 .btn:disabled {

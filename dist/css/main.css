@@ -602,13 +602,7 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-left: 20px;
-}
-
-.btn_round:hover {
-  box-shadow: 0 0 2px #065ac6;
-  background: rgba(59, 142, 249, 0.1);
-  background-clip: padding-box;
-  color: #065ac6;
+  transition: all 0.3s ease;
 }
 
 .btn:disabled {
@@ -1162,20 +1156,21 @@ h3 {
   flex-direction: row;
   align-items: center;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .walkthrough_cta:hover {
   color: #065ac6;
 }
 
-.walkthrough_cta:hover .btn-round {
-  box-shadow: 0 0 2px #065ac6;
-  background: rgba(59, 142, 249, 0.2);
-  background-clip: padding-box;
+.walkthrough_cta:hover .btn_round {
+  box-shadow: none;
+  background-color: #065ac6;
+  color: #065ac6;
 }
 
-.walkthrough_cta:hover .btn-round svg path {
-  fill: #065ac6;
+.walkthrough_cta:hover .btn_round svg path {
+  fill: #fff;
 }
 
 @media screen and (min-width: 1024px) { 
