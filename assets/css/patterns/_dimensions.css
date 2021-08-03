@@ -246,6 +246,12 @@ html {
   .mt-xs-300 {
     margin-top: 300px;
   }
+  .mb-xs-10 {
+    margin-bottom: 10px;
+  }
+  .mb-xs-20 {
+    margin-bottom: 20px;
+  }
   .mb-xs-30 {
     margin-bottom: 30px;
   }

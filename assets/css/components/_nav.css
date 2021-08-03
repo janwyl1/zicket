@@ -12,10 +12,9 @@
   z-index: 99;
 }
 
-.nav-colored {
-  background-color: $dark-purple2 !important;
-  border-bottom: 1px solid $dark-purple3;
-  margin-top: -42px;
+
+.zicket-logo svg path {
+  fill: white;
 }
 
 .nav__list {
@@ -30,7 +29,7 @@
   top: 80px;
   left: 0;
   width: 100%;
-  background-color: $dark-purple2;
+  background-color: $white;
   box-shadow: 0 5px 5px -5px #333;
   /* padding-left: 16px; */
 
@@ -52,15 +51,10 @@
 }
 .nav__list_item a:hover {
   opacity: 1;
-  background: $dark-purple3;
+  background: $blue-hover;
+  /* color: $white; */
 }
 
-.nav__list_item:last-child {
-  background: $pink;
-}
-.nav__list_item:last-child:hover a{
-  background: $pink-hover;
-}
 
 .get-zicket-btn {
   font-size: 0.75rem;
@@ -79,6 +73,11 @@
   fill: $white;
   align-self: center;
   cursor: pointer;
+  opacity: 0.9
+}
+.nav__burger:hover {
+  opacity: 1;
+  transition: opacity 200ms linear;
 }
 
 .nav__overlay{
@@ -98,6 +97,38 @@
 	visibility:visible;
 }
 
+.nav__colored {
+  /* background-color: $dark-purple2 !important; */
+  border-bottom: 1px solid $blue-gray;
+  background-color: $white;
+  margin-top: -42px;
+}
+
+.nav__colored .zicket-logo svg path {
+  fill: $blue-hover;
+}
+
+.nav__colored .nav__burger {
+  fill: $blue-hover;
+}
+
+.nav__colored .nav__list_item a{
+  color: $blue-gray;
+}
+.nav__colored .nav__list_item a:hover{
+  color: $white;
+}
+
+.nav__list_item:last-child {
+  background: $pink;
+}
+.nav__list_item:last-child a{
+  color: $white;
+}
+.nav__list_item:last-child:hover a{
+  background: $pink-hover;
+  color: $white;
+}
 
 @media screen and (min-width: 1024px) {
   .nav__burger {
@@ -141,5 +172,10 @@
     opacity:0;
     visibility:invisible;
   }
+
+  .nav__colored .nav__list_item a:hover{
+    color: $blue-gray;
+  }
+
   
 }

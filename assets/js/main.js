@@ -10,10 +10,10 @@
   // Display nav bg on scroll  
   window.onscroll = function () {
       // if (document.body.scrollTop >= hero.offsetHeight - 40) {
-        nav.classList.add("nav-colored");
+        nav.classList.add("nav__colored");
       // } 
       if (document.body.scrollTop === 0 && !navOverlay.classList.contains('active')) {
-        nav.classList.remove("nav-colored")
+        nav.classList.remove("nav__colored")
       }
     }
 
@@ -21,7 +21,7 @@
   navBurger.addEventListener('click', e => {
     navItems.classList.toggle('d-flex')
     navOverlay.classList.toggle('active')
-    nav.classList.add("nav-colored");
+    nav.classList.add("nav__colored");
   })
 
   // Carousel config
@@ -88,8 +88,9 @@
       }
     };
 
-    xhttp.onError = function () {
-      errorMsg.innerHTML = "There was an issue submitting the form";
+    xhttp.onerror = function (e) {
+      console.log(e.target.status);
+      errorMsg.innerHTML = "There was an issue submitting the form (check that the API is up!)";
       successMsg.classList.remove("d-block");
       errorMsg.classList.add("d-block");
     };

@@ -417,6 +417,12 @@ html {
   .mt-xs-300 {
     margin-top: 300px;
   }
+  .mb-xs-10 {
+    margin-bottom: 10px;
+  }
+  .mb-xs-20 {
+    margin-bottom: 20px;
+  }
   .mb-xs-30 {
     margin-bottom: 30px;
   }
@@ -503,7 +509,7 @@ h3 {
 }
 
 .btn_pink:hover {
-  background-color: #f70863;
+  background-color: #CE326D;
 }
 
 .btn_outline_pink {
@@ -515,7 +521,7 @@ h3 {
 
 .btn_outline_pink:hover {
   border: 4px solid transparent;
-  box-shadow: 0 0 0 1px #f70863;
+  box-shadow: 0 0 0 1px #CE326D;
   background-clip: padding-box; 
   /* // had to use this otherwise the transparent border would appear as pink due to the background colour */
 }
@@ -927,10 +933,8 @@ h3 {
   z-index: 99;
 }
 
-.nav-colored {
-  background-color: #27117f !important;
-  border-bottom: 1px solid #200d6f;
-  margin-top: -42px;
+.zicket-logo svg path {
+  fill: white;
 }
 
 .nav__list {
@@ -945,7 +949,7 @@ h3 {
   top: 80px;
   left: 0;
   width: 100%;
-  background-color: #27117f;
+  background-color: #fff;
   box-shadow: 0 5px 5px -5px #333;
   /* padding-left: 16px; */
 
@@ -970,15 +974,8 @@ h3 {
 
 .nav__list_item a:hover {
   opacity: 1;
-  background: #200d6f;
-}
-
-.nav__list_item:last-child {
-  background: #f93b84;
-}
-
-.nav__list_item:last-child:hover a{
-  background: #f70863;
+  background: #065ac6;
+  /* color: $white; */
 }
 
 .get-zicket-btn {
@@ -998,6 +995,12 @@ h3 {
   fill: #fff;
   align-self: center;
   cursor: pointer;
+  opacity: 0.9
+}
+
+.nav__burger:hover {
+  opacity: 1;
+  transition: opacity 200ms linear;
 }
 
 .nav__overlay{
@@ -1016,6 +1019,42 @@ h3 {
 .nav__overlay.active{
 	opacity:1;
 	visibility:visible;
+}
+
+.nav__colored {
+  /* background-color: $dark-purple2 !important; */
+  border-bottom: 1px solid #5a6488;
+  background-color: #fff;
+  margin-top: -42px;
+}
+
+.nav__colored .zicket-logo svg path {
+  fill: #065ac6;
+}
+
+.nav__colored .nav__burger {
+  fill: #065ac6;
+}
+
+.nav__colored .nav__list_item a{
+  color: #5a6488;
+}
+
+.nav__colored .nav__list_item a:hover{
+  color: #fff;
+}
+
+.nav__list_item:last-child {
+  background: #f93b84;
+}
+
+.nav__list_item:last-child a{
+  color: #fff;
+}
+
+.nav__list_item:last-child:hover a{
+  background: #CE326D;
+  color: #fff;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1060,6 +1099,11 @@ h3 {
     opacity:0;
     visibility:invisible;
   }
+
+  .nav__colored .nav__list_item a:hover{
+    color: #5a6488;
+  }
+
   
 }
 
