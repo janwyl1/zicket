@@ -26,7 +26,7 @@
   justify-content: center;
 }
 .walkthrough__image {
-  width: 400px;
+  max-width: 300px;
   height: auto;
   display: flex;
   align-items: center;
@@ -94,4 +94,7 @@
   .walkthrough .row:first-child {
     margin-bottom: 150px;
   }
+  .walkthrough__image {
+    max-width: 400px;
+   }
 }

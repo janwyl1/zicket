@@ -56,7 +56,6 @@ html {
 .w-6\/12 {
   width: 50%;
 }
-
 .w-5\/12 {
   width: 41.66666667%;
 }
@@ -69,7 +68,6 @@ html {
 .w-2\/12 {
   width: 16.66666667%;
 }
-
 .w-1\/12 {
   width: 8.33333333%;
 }
@@ -77,26 +75,21 @@ html {
 .ml-1\/12 {
   margin-left: 8.33333333%;
 }
-
 .ml-2\/12 {
   margin-left: 16.66666667%;
 }
-
 .ml-3\/12 {
   margin-left: 25%;
 }
 .ml-4\/12 {
   margin-left: 33.33333333%;
 }
-
 .mr-3\/12 {
   margin-right: 25%;
 }
-
 .mr-2\/12 {
   margin-right: 16.6666%;
 }
-
 .mr-1\/12 {
   margin-right: 8.3333%;
 }
@@ -177,6 +170,11 @@ html {
   margin-right: auto;
 }
 
+.pt-100 {
+  padding-top: 100px;
+}
+
+
 .d-flex {
   display: flex;
 }
@@ -185,10 +183,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.pt-100 {
-  padding-top: 100px;
 }
 
 @media screen and (max-width: 768px) {
@@ -230,9 +224,6 @@ html {
   .ml-xs-0 {
     margin-left: 0;
   }
-  .mb-xs-0 {
-    margin-bottom: 0;
-  }
   .mt-xs-0 {
     margin-top: 0;
   }
@@ -245,6 +236,9 @@ html {
 
   .mt-xs-300 {
     margin-top: 300px;
+  }
+  .mb-xs-0 {
+    margin-bottom: 0;
   }
   .mb-xs-10 {
     margin-bottom: 10px;
@@ -267,11 +261,14 @@ html {
   }
 }
 
-@media only screen and (min-width: 768px) {
+
+
+@media only screen and (min-width: 768px) { 
   .w-sm-3\/12 {
     width: 25%;
   }
 }
+
 @media only screen and (min-width: 1280px) {
   .w-lg-2\/12 {
     width: 16.66666667%;

@@ -1,5 +1,18 @@
-Modal
+# Zicket
+
+## Introduction
+
+Frontend training site for Parallax 
+
+## Instructions
+
+...
+
+  
+## Resources
+
+**Modal**
 https://github.com/pinceladasdaweb/mediabox
 
-Slider
+**Slider**
 https://swiperjs.com/
