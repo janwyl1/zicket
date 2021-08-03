@@ -17,30 +17,30 @@
   opacity: 1;
 }
 
-.footer-buy-copy {
+.footer__buy_copy {
   font-size: 0.75rem;
 }
 
-.footer-border {
+.footer__border {
   border: 1px solid $light-grey;
   opacity: 0.3;
 }
 
-.footer-copyright {
+.footer__copyright {
   color: $white;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 3px;
 }
 
-.footer-social-icon {
+.footer__social_icon {
   margin-right: 25px;
   opacity: 0.9
 }
-.footer-social-icon:hover {
+.footer__social_icon:hover {
   opacity: 1;
 }
 
-.footer-bottom {
+.footer__bottom {
   display: flex;
 }

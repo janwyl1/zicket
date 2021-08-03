@@ -1,21 +1,24 @@
 !(function () {
   "use strict";
   // Navbar
-  const nav = document.querySelector('.nav');
-  const navItems = document.querySelector(".nav__list");
-  const navBurger = document.querySelector('.js-nav-burger')
-  const navOverlay = document.querySelector('.nav__overlay')
-  const hero = document.querySelector(".hero");
+  var nav = document.querySelector('.nav');
+  var navItems = document.querySelector(".nav__list");
+  var navBurger = document.querySelector('.js-nav-burger')
+  var navOverlay = document.querySelector('.nav__overlay')
 
-  // Display nav bg on scroll  
-  window.onscroll = function () {
-      // if (document.body.scrollTop >= hero.offsetHeight - 40) {
-        nav.classList.add("nav__colored");
-      // } 
-      if (document.body.scrollTop === 0 && !navOverlay.classList.contains('active')) {
-        nav.classList.remove("nav__colored")
-      }
+  // Unless we're at the top of page, use the sticky nav
+  function switchToStickyNav() {
+    nav.classList.add("nav__colored");
+    if (document.body.scrollTop === 0 && !navOverlay.classList.contains('active')) { 
+      nav.classList.remove("nav__colored")
     }
+  }
+  window.onscroll = function () {
+    switchToStickyNav()
+  }
+  window.onload = function () {
+    switchToStickyNav()
+  }
 
   // Toggle burger menu 
   navBurger.addEventListener('click', e => {
@@ -41,7 +44,7 @@
   // Attach newsletter form submission handler
   window.addEventListener("load", function () {
     document
-      .querySelector(".contact-form")
+      .querySelector(".signup__form")
       .addEventListener("submit", function (e) {
         e.preventDefault();
         submitNewsletterForm();
@@ -51,8 +54,8 @@
   // Send Mail
   function submitNewsletterForm() {
     var emailAddr = document.getElementById("email").value;
-    var errorMsg = document.querySelector(".contact-form-error");
-    var successMsg = document.querySelector(".contact-form-success");
+    var errorMsg = document.querySelector(".signup__form_error");
+    var successMsg = document.querySelector(".signup__form_success");
     var submitBtn = document.getElementById("newsletterSubmit");
     var emailInput = document.getElementById("email");
     var xhttp = new XMLHttpRequest();

@@ -10,7 +10,7 @@
   color: $light-purple2;
   font-size: 0.875rem;
 }
-.contact-form input {
+.signup__form input {
   background: transparent;
   border-width: 0 0 2px;
   border-color: $light-purple2;
@@ -18,57 +18,39 @@
   padding: 17px;
 }
 
-.contact-form input::placeholder {
+.signup__form input::placeholder {
   color: $light-purple2;
 }
-.contact-form input:focus {
+.signup__form input:focus {
   border: $white;
   color: $white;
 }
 
-.contact-form-error,
-.contact-form-success {
+.signup__form_error,
+.signup__form_success {
   font-size: 0.75rem;
   margin-top: 4px;
   margin-left: 4px;
   display: none;
 }
-.contact-form-error {
+.signup__form_error {
   color: $pink;
 }
-.contact-form-success {
+.signup__form_success {
   color: $blue;
 }
 
-.contact-form label {
+.signup__form label {
   font-size: 0.87rem;
   color: $light-purple2;
   margin-left: 4px;
 }
 
-
-/* @media screen and (max-width: 768px) { 
-  .contact-form .col{
-    width: 100%
-  }
-  .contact-form .col:last-child {
-    width: 100%;
-  }
-} */
-
 @media screen and (min-width: 768px) {
-  .contact-form .col{
+  .signup__form .col{
     width: 60%;
   }
-  .contact-form .col:last-child {
+  .signup__form .col:last-child {
     width: 40%;
   }
 }
-/* @media screen and (min-width: 1024px) {
-  .contact-form .col{
-    width: 100%;
-  }
-  .contact-form .col:last-child {
-    width: 100%;
-  }
-} */

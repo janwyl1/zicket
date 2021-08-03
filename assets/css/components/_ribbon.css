@@ -10,14 +10,16 @@
   display: block;
 }
 
-.ribbon-link {
+.ribbon__link {
   color: $pink;
   margin-left: 10px;
   text-decoration: underline;
   font-weight: 700;
+  opacity: 0.9;
+  transition: all 0.3s ease;
 }
 
-.ribbon-link:hover {
+.ribbon__link:hover {
   text-decoration: none;
-  transition: text-decoration 0.3s ease;
+  opacity: 1;
 }

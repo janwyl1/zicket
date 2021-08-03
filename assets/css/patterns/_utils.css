@@ -1,36 +1,29 @@
-.sr-only {
+.sr_only {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
-.outline-white {
+.outline_white {
   color: transparent;
   -webkit-text-stroke: 2px $white; 
   /* // not ideal as doesnt support ie 11 */
 }
 
-.outline-blue {
+.outline_blue {
   color: transparent;
   -webkit-text-stroke: 2px $blue; 
   /* // not ideal as doesnt support ie 11 */
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-80 {
+.opacity_80 {
   opacity: 0.8;
 }
 
@@ -38,9 +31,9 @@
   text-transform: uppercase;
 }
 
-.d-block {
+.d_block {
   display: block;
 }
-.d-flex {
+.d_flex {
   display: flex;
 }

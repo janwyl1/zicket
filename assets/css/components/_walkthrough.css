@@ -4,28 +4,28 @@
 .walkthrough .row:first-child {
   margin-bottom: 80px;
 }
-.walkthrough_h2 {
+.walkthrough__h2 {
   color: $blue;
   margin-bottom: 16px;
 }
-.walkthrough_h3 {
+.walkthrough__h3 {
   color: $dark-blue;
   margin-top: 40px;
   letter-spacing: -0.65px;
 }
-.walkthrough_text {
+.walkthrough__text {
   text-align: left;
   line-height: 30px;
   color: $blue-gray;
 }
-.walkthrough_img_container {
+.walkthrough__img_container {
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.walkthrough_image {
+.walkthrough__image {
   width: 400px;
   height: auto;
   display: flex;
@@ -33,7 +33,7 @@
   justify-content: center;
 }
 
-.walkthrough_img_container::before {
+.walkthrough__img_container::before {
   background-color: $off-white;
   height: 90%;
   width: 100%;
@@ -45,11 +45,11 @@
   left: 0;
   z-index: -1;
 }
-.row:nth-child(odd) .walkthrough_img_container:before {
+.row:nth-child(odd) .walkthrough__img_container:before {
   transform: skew(-10deg, -10deg) rotate3d(1, 1, 0, 35deg);
 }
 
-.walkthrough_setUpPaymentsBackground {
+.walkthrough__setUpPaymentsBackground {
   opacity: 10%;
   color: $blue;
   line-height: 90px;
@@ -61,7 +61,7 @@
   font-size: 3.75rem;
 }
 
-.walkthrough_cta {
+.walkthrough__cta {
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 19px;
@@ -75,17 +75,17 @@
   transition: all 0.3s ease;
 }
 
-.walkthrough_cta:hover {
+.walkthrough__cta:hover {
   color: $blue-hover;
 }
 
-.walkthrough_cta:hover .btn_round {
+.walkthrough__cta:hover .btn_round {
   box-shadow: none;
   background-color: $blue-hover;
   color: $blue-hover;
 }
 
-.walkthrough_cta:hover .btn_round svg path {
+.walkthrough__cta:hover .btn_round svg path {
   fill: $white;
 }
 
