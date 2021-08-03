@@ -22,7 +22,7 @@
 
   // Toggle burger menu 
   navBurger.addEventListener('click', e => {
-    navItems.classList.toggle('d-flex')
+    navItems.classList.toggle('d_flex')
     navOverlay.classList.toggle('active')
     nav.classList.add("nav__colored");
   })
@@ -78,24 +78,24 @@
       var res = JSON.parse(this.responseText);
       if (res.success) {
         successMsg.innerHTML = "Thanks for signing up!";
-        errorMsg.classList.remove("d-block");
-        successMsg.classList.add("d-block");
+        errorMsg.classList.remove("d_block");
+        successMsg.classList.add("d_block");
         submitBtn.disabled = true;
         emailInput.disabled = true;
       } else {
         errorMsg.innerHTML = res.errors.email
           ? res.errors.email
           : "There was an unexpected failure";
-        successMsg.classList.remove("d-block");
-        errorMsg.classList.add("d-block");
+        successMsg.classList.remove("d_block");
+        errorMsg.classList.add("d_block");
       }
     };
 
     xhttp.onerror = function (e) {
       console.log(e.target.status);
       errorMsg.innerHTML = "There was an issue submitting the form (check that the API is up!)";
-      successMsg.classList.remove("d-block");
-      errorMsg.classList.add("d-block");
+      successMsg.classList.remove("d_block");
+      errorMsg.classList.add("d_block");
     };
   }
 })();
