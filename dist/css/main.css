@@ -925,7 +925,7 @@ h3 {
   position: fixed;
   width: 100%;
   z-index: 99;
-  transition: background-color 200ms linear;
+  transition: background-color .3s ease;
   padding: 8px 16px;
   min-height: 80px;
   align-items: center;
@@ -950,15 +950,11 @@ h3 {
   width: 100%;
   background-color: #fff;
   box-shadow: 0 5px 5px -5px #333;
-  /* padding-left: 16px; */
-
 }
 
 .nav__list_item {
-  display: inline;
-  /* padding: 8px 0; */
-  /* margin-right: 43px; */
-  
+  display: inline; 
+  /* transition: all .3s ease; */
 }
 
 .nav__list_item a {
@@ -969,12 +965,12 @@ h3 {
   display: block;
   padding: 8px 0 8px 16px;
   opacity: 0.9;
+  transition: all .3s ease;
 }
 
 .nav__list_item a:hover {
   opacity: 1;
   background: #065ac6;
-  /* color: $white; */
 }
 
 .get-zicket-btn {
@@ -999,7 +995,7 @@ h3 {
 
 .nav__burger:hover {
   opacity: 1;
-  transition: opacity 200ms linear;
+  transition: opacity 0.3s ease;
 }
 
 .nav__overlay{
@@ -1021,7 +1017,6 @@ h3 {
 }
 
 .nav__colored {
-  /* background-color: $dark-purple2 !important; */
   border-bottom: 1px solid #5a6488;
   background-color: #fff;
   margin-top: -42px;
@@ -1432,7 +1427,6 @@ h3 {
   align-items: center;
   justify-content: center;
   display: flex;
-  transition: 0.2s linear;
   transition: transform 0.5s ease;
 }
 
