@@ -20,7 +20,7 @@ window.onload = function () {
 }
 
 // Toggle burger menu 
-navBurger.addEventListener('click', e => {
+navBurger.addEventListener('click', function(e) {
   navItems.classList.toggle('d_flex')
   navOverlay.classList.toggle('active')
   nav.classList.add("nav__colored");
@@ -35,19 +35,6 @@ var swiper = new Swiper(".clientSwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
-
-// Open hero video in modal
-MediaBox(".mediabox");
-
-// Attach newsletter form submission handler
-window.addEventListener("load", function () {
-  document
-    .querySelector(".signup__form")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
-      submitNewsletterForm();
-    });
 });
 
 // Send Mail
@@ -97,3 +84,17 @@ function submitNewsletterForm() {
     errorMsg.classList.add("d_block");
   };
 }
+
+// Attach newsletter form submission handler
+window.addEventListener("load", function () {
+  document
+    .querySelector(".signup__form")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+      submitNewsletterForm();
+    });
+
+  // Open hero video in modal
+  MediaBox(".mediabox");
+});
+
