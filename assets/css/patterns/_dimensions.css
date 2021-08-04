@@ -17,6 +17,8 @@ html {
   box-sizing: inherit;
 }
 
+html, body { height: 100% }
+
 .container {
   max-width: 1260px;
   width: 100%;

@@ -88,7 +88,7 @@
 	visibility:hidden;
   min-height: 100%;
 }
-.nav__overlay.active{
+.nav__overlay.active {
 	opacity:1;
 	visibility:visible;
 }
@@ -165,7 +165,7 @@
 
   .nav__overlay.active{
     opacity:0;
-    visibility:invisible;
+    visibility:hidden;
   }
 
   .nav__colored .nav__list_item a:hover{
