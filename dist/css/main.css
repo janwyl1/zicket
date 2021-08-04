@@ -863,6 +863,7 @@ h3 {
   opacity: 0.9;
   width: 190px;
   transition: opacity ease 0.3s;
+  display: block;
 }
 
 .hero hr {

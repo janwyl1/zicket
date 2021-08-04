@@ -4,7 +4,7 @@
   "description": "Frontend training site",
   "scripts": {
     "css": "postcss assets/css/main.css -o dist/css/main.css",
-    "js": "uglifyjs  ./assets/js/modal.js ./assets/js/main.js -o ./dist/js/main.min.js",
+    "js": "uglifyjs ./assets/js/modal.js ./assets/js/main.js -o ./dist/js/main.min.js",
     "copyImg": "cp -R ./assets/img ./dist/",
     "html": "cp ./index.html ./build/index.html",
     "deleteDist": "rimraf ./dist",
@@ -17,11 +17,13 @@
     "watch:js": "watch 'npm run js' ./assets/js",
     "watch": "parallelshell 'npm run watch:css' 'npm run watch:js'",
     "build": "npm run createDist && parallelshell 'npm run css' 'npm run js' 'npm run copyImg' 'npm run createBuild' && npm run copyToBuild",
-    "deploy": "git subtree push --prefix build origin gh-pages"
+    "deploy": "git subtree push --prefix build origin gh-pages",
+    "babel": "babel ./dist/js -d lib"
   },
   "babel": {
     "presets": [
-      "es2015"
+      "@babel/preset-env",
+      "minify"
     ]
   },
   "author": "James Anwyl",
