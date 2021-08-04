@@ -5,15 +5,18 @@
   "scripts": {
     "css": "postcss assets/css/main.css -o dist/css/main.css",
     "js": "uglifyjs  ./assets/js/modal.js ./assets/js/main.js -o ./dist/js/main.min.js",
-    "img": "mv ./assets/img ./dist/img",
-    "createDist": "mkdir dist && mkdir dist/js && mkdir dist/css && mkdir dist/img",
+    "img": "cp -R ./assets/img ./dist/",
+    "html": "cp ./index.html ./build/index.html",
     "deleteDist": "rimraf ./dist",
+    "createDist": "npm run deleteDist && mkdir dist && mkdir dist/js && mkdir dist/css && mkdir dist/img",
+    "deleteBuild": "rimraf ./build",
+    "createBuild": "npm run deleteBuild && mkdir build",
+    "copyToBuild": "cp -R ./dist ./build && cp ./index.html ./build/",
     "serve": "http-server -p 3000",
     "watch:css": "watch 'npm run css' ./assets/css",
     "watch:js": "watch 'npm run js' ./assets/js",
-    "watch:img": "watch 'npm run img'",
     "watch": "parallelshell 'npm run watch:css' 'npm run watch:js'",
-    "start": "npm run deleteDist && npm run createDist && parallelshell 'npm run serve' 'npm run watch' 'npm run img'"
+    "build": "npm run createDist && parallelshell 'npm run css' 'npm run js' 'npm run img' 'npm run createBuild' && npm run copyToBuild"
   },
   "babel": {
     "presets": [

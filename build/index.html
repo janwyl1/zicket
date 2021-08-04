@@ -1,0 +1,571 @@
+<html lang="en">
+  <head>
+    <title>Zicket - Buy event tickets</title>
+    <meta charset="utf8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1 user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <meta name="description" content="Make your event a success with Zicket" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="dist/css/main.css" />
+    <link rel="preload" as="image" href="dist/img/hero.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/img/apple-touch-icon-fa5eed8343.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/img/favicon-32x32-970647932a.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/img/favicon-16x16-ea2ca9928e.png">
+  </head>
+
+  <body>
+    <a href="#main" class="sr_only">Skip to content</a>
+    <header>
+      <div class="ribbon">
+        Looking to buy tickets to an event?
+        <a href="#" class="ribbon__link">Get them here</a>
+      </div>
+
+      <nav class="nav" data-module="/modules/nav.js">
+        <a href="/" class="nav__zicket_logo">
+          <svg width="133" height="25" viewBox="0 0 133 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-colored">
+            <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="133" height="25">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H133V25H0V0Z"/>
+            </mask>
+            <g mask="url(#mask0)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M123.144 20.943C121.934 20.943 120.991 20.6078 120.313 19.9371C119.635 19.2664 119.296 18.3545 119.296 17.2013C119.296 16.1111 119.505 15.1467 119.922 14.3081C120.311 13.5008 120.918 12.8197 121.674 12.3427C122.425 11.871 123.28 11.6351 124.239 11.6354C125.449 11.6353 126.387 11.9707 127.055 12.6413C127.722 13.3131 128.056 14.225 128.056 15.377C128.056 16.4681 127.848 17.4326 127.431 18.2703C127.041 19.0774 126.434 19.7585 125.678 20.2356C124.918 20.7099 124.039 20.9554 123.144 20.943V20.943ZM122.832 24.9997C124.771 24.9997 126.518 24.5699 128.072 23.7103C129.626 22.8507 130.836 21.6766 131.701 20.1884C132.567 18.7001 133 17.0231 133 15.1572C133 13.6479 132.65 12.322 131.951 11.1792C131.252 10.0365 130.267 9.15089 128.995 8.52225C127.722 7.89293 126.231 7.5784 124.521 7.57861C122.581 7.57861 120.84 8.00845 119.296 8.86807C117.792 9.69023 116.537 10.9075 115.667 12.39C114.791 13.8787 114.353 15.5558 114.353 17.4211C114.353 18.9304 114.702 20.2565 115.401 21.3991C116.1 22.542 117.09 23.4279 118.373 24.0568C119.656 24.6856 121.142 25 122.832 24.9997V24.9997ZM111.569 5.47218C112.528 5.47218 113.31 5.19436 113.915 4.63879C114.52 4.08322 114.823 3.3546 114.823 2.45293C114.823 1.76129 114.557 1.17962 114.025 0.708076C113.493 0.236528 112.799 0.000479355 111.944 0C110.984 0 110.207 0.277821 109.613 0.833393C109.018 1.38945 108.721 2.08656 108.721 2.92475C108.711 3.61564 109.003 4.27633 109.519 4.73261C110.051 5.22566 110.734 5.47218 111.569 5.47218V5.47218ZM104.967 24.7484H109.816L113.164 7.83061H108.315L104.967 24.7484ZM99.3039 24.9997C100.154 25.0106 100.972 24.676 101.573 24.0718C102.208 23.4542 102.526 22.6733 102.527 21.7292C102.527 20.891 102.261 20.2098 101.729 19.6857C101.197 19.1617 100.514 18.8996 99.6793 18.8996C98.7615 18.8996 97.9898 19.2034 97.3641 19.8111C96.7386 20.4198 96.4259 21.206 96.4259 22.1695C96.4259 22.9871 96.6971 23.6633 97.2394 24.1978C97.7818 24.7325 98.4699 24.9997 99.3039 24.9997V24.9997ZM91.4515 11.9811H95.6438L96.3946 8.20793H92.2023L93.0159 4.08821H88.1348L87.3213 8.20793H84.7246L83.9739 11.9811H86.5704L85.2255 18.8051C85.1289 19.2919 85.0764 19.7865 85.0688 20.2829C85.0688 21.7504 85.5484 22.9034 86.5077 23.7418C87.4671 24.5802 88.7396 24.9995 90.3253 24.9997C92.0347 24.9997 93.4322 24.6644 94.5175 23.9938L93.798 20.5034C93.1303 20.9013 92.4733 21.1003 91.8269 21.1005C90.638 21.1005 90.0435 20.5554 90.0432 19.4652C90.037 19.233 90.0581 19.0009 90.1059 18.7736L91.4515 11.9811ZM74.181 11.258C75.3277 11.258 76.2402 11.5673 76.9186 12.1859C77.597 12.8045 77.9361 13.6587 77.9359 14.7484H69.5819C69.9152 13.6589 70.4785 12.8047 71.2717 12.1859C72.0641 11.5675 73.0339 11.2582 74.181 11.258V11.258ZM82.4095 15.0312C82.4095 13.5429 82.0811 12.2327 81.4243 11.1005C80.7724 9.97367 79.8035 9.06577 78.6397 8.49075C77.4398 7.88265 76.0268 7.57861 74.4004 7.57861C72.4811 7.57861 70.7707 8.00318 69.2693 8.85232C67.7934 9.67517 66.5747 10.8946 65.7495 12.3742C64.9046 13.8732 64.4822 15.5556 64.4822 17.4211C64.4822 18.9304 64.8315 20.2617 65.5301 21.4149C66.2287 22.568 67.2301 23.4537 68.5341 24.0718C69.8368 24.6909 71.3542 25.0002 73.0861 24.9997C74.3795 25.006 75.6663 24.8153 76.903 24.4341C78.074 24.077 79.1674 23.5008 80.1256 22.7358L78.0919 19.4967C77.4882 20.0115 76.7927 20.4064 76.0424 20.6602C75.2526 20.9341 74.4224 21.0722 73.5869 21.069C70.854 21.069 69.4044 19.916 69.2379 17.6101H82.1281C82.3055 16.7617 82.3996 15.898 82.4094 15.0312H82.4095ZM66.328 7.83061H59.9772L51.9048 14.4656L54.502 1.41547H49.6209L44.9906 24.7484H49.871L50.6845 20.6602L53.6572 18.1758L57.6613 24.7484H63.3246L57.5367 15.1887L66.328 7.83061ZM35.8239 24.9997C37.5333 24.9997 39.0925 24.6434 40.5013 23.9308C41.9089 23.2179 43.0195 22.222 43.8329 20.943L40.2349 18.6791C39.2756 20.1884 37.899 20.943 36.1053 20.943C34.8743 20.943 33.9147 20.6025 33.2267 19.9213C32.5385 19.2402 32.1944 18.323 32.1944 17.1698C32.1944 16.1009 32.4081 15.1469 32.8355 14.3081C33.2365 13.4988 33.8542 12.8181 34.6192 12.3427C35.3803 11.8709 36.2406 11.6351 37.2001 11.6353C38.973 11.6353 40.2244 12.4004 40.9543 13.9307L45.0846 11.8551C44.4627 10.5198 43.4393 9.41433 42.159 8.69482C40.8553 7.95113 39.3066 7.57909 37.5129 7.57861C35.552 7.57861 33.7897 8.00845 32.2258 8.86807C30.6618 9.72769 29.4416 10.9016 28.565 12.39C27.6887 13.8787 27.2507 15.5558 27.2507 17.4211C27.2507 18.9304 27.6001 20.2564 28.2992 21.3991C28.9975 22.542 29.9935 23.4279 31.2869 24.0568C32.5803 24.6856 34.0926 25 35.8239 24.9997V24.9997ZM24.4667 5.47218C25.4261 5.47218 26.2082 5.19436 26.8133 4.63879C27.4183 4.08315 27.7208 3.3546 27.7208 2.45293C27.7208 1.76129 27.4549 1.17962 26.923 0.708076C26.391 0.236459 25.6974 0.000479355 24.8422 0C23.8828 0 23.1059 0.277821 22.5113 0.833393C21.9167 1.38897 21.6194 2.08609 21.6194 2.92475C21.6098 3.61557 21.9013 4.27612 22.4173 4.73261C22.9494 5.22566 23.6326 5.47218 24.4667 5.47218V5.47218ZM17.8653 24.7484H22.7143L26.0624 7.83061H21.2127L17.8653 24.7484ZM18.084 7.83061H3.62947L2.87864 11.6038H10.9818L0.594805 21.7922L0 24.7484H15.018L15.7688 20.9745H7.13358L17.5212 10.7862L18.084 7.83061Z" />
+            </g>
+            </svg>
+        </a>
+
+        <ul class="nav__list">
+          <li class="nav__list_item"><a href="#">About</a></li>
+          <li class="nav__list_item"><a href="#">Features</a></li>
+          <li class="nav__list_item"><a href="#">Clients</a></li>
+          <li class="nav__list_item"><a href="#">News</a></li>
+          <li class="nav__list_item"><a href="#">FAQ</a></li>
+          <li class="nav__list_item"><a href="#">Get Zicket</a></li>
+        </ul>
+        
+        <button class="nav__burger | js-nav-burger" aria-label="Menu">
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="15" rx="8"></rect>
+            <rect y="30" width="100" height="15" rx="8"></rect>
+            <rect y="60" width="100" height="15" rx="8"></rect>
+          </svg>
+        </button>
+        <div>
+          <a href="#" class="get-zicket-btn btn btn_pink mt-10">Get Zicket</a>
+        </div>
+      </nav>
+      <div class="nav__overlay"></div>
+    </header>
+
+    <main class="" id="main">
+      <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title outline_white">
+            MAKE YOUR EVENT A SUCCESS
+          </h1>
+
+          <div class="hero__text">
+            Zicket handles all the hassle of selling tickets for every type of event.
+          </div>
+
+          <div class="hero__cta">
+            <a href="#" class="btn btn_pink  btn_outline_pink">
+              Get Started
+              <svg
+                class="btn_arrow"
+                width="14"
+                height="8"
+                viewBox="0 0 12 7"
+                fill=""
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.5645 3.34766L8.3584 6.55371V3.93555H0.517578V2.75293H8.3584L8.36523 0.141602L11.5645 3.34766Z"
+                  fill="#fff"
+                /></svg
+            ></a>
+          </div>
+          <div class="hero__aside_video">
+            <a
+              href="https://www.youtube.com/watch?v=2uAVk1frFMI"
+              class="mediabox"
+              ><img src="dist/img/hero-video-thumb.png" alt="Watch the video"
+            /></a>
+          </div>
+          <div class="hero__aside">
+            <div class="hero__aside_text">
+              <hr />
+              Over <span class="bold">3,000,000 Tickets</span> Sold at some of
+              Asia's Top Events Last Year
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="walkthrough">
+        <div class="container">
+          <div class="row">
+            <div class="col w-5/12 ml-1/12 ml-xs-0">
+              <h2 class="walkthrough__h2">
+                <span class="outline_blue">How Zicket</span> Works
+              </h2>
+            </div>
+            <div class="col w-4/12 ml-1/12 ml-xs-0">
+              <p class="walkthrough__text mb-40">
+                Our Hong Kong and Singapore based experts will help get your
+                event set-up and selling tickets quickly and easily.
+              </p>
+            </div>
+          </div>
+
+          <div class="row mb-120">
+            <div class="col w-6/12">
+              <div class="walkthrough__img_container">
+                <img
+                  src="dist/img/payments.png"
+                  class="walkthrough__image"
+                  alt="Mobile Payments"
+                />
+              </div>
+            </div>
+            <div class="col w-4/12 ml-1/12 ml-xs-0">
+              <div class="walkthrough__setUpPaymentsBackground">01</div>
+              <h3 class="walkthrough__h3">Set up & Payments</h3>
+              <p class="walkthrough__text mb-40">
+                Quickly build your dedicated events page in English & Chinese.
+                Accept payments from all major providers through our safe and
+                reliable checkout.
+              </p>
+              <a href="#" class="walkthrough__cta"
+                >Explore features
+                <span class="btn_round"
+                  ><svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5645 3.34766L8.3584 6.55371V3.93555H0.517578V2.75293H8.3584L8.36523 0.141602L11.5645 3.34766Z"
+                      fill="#3B8EF9"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="row mb-120">
+            <div class="col w-4/12 ml-1/12 ml-xs-0">
+              <div class="walkthrough__setUpPaymentsBackground">02</div>
+              <h3 class="walkthrough__h3">Progress & Promotion</h3>
+              <p class="walkthrough__text mb-40">
+                View sales & audience data in real-time. Maximise event reach
+                via Zicket’s Social Media channels, eDM Database and partner
+                network.
+              </p>
+              <a href="#" class="walkthrough__cta"
+                >Explore features
+                <span class="btn_round"
+                  ><svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5645 3.34766L8.3584 6.55371V3.93555H0.517578V2.75293H8.3584L8.36523 0.141602L11.5645 3.34766Z"
+                      fill="#3B8EF9"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="col w-6/12 ml-1/12 ml-xs-0">
+              <div class="walkthrough__img_container">
+                <img
+                  src="dist/img/promotion.png"
+                  class="walkthrough__image"
+                  alt="Promotion"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-120">
+            <div class="col w-6/12">
+              <div class="walkthrough__img_container">
+                <img
+                  src="dist/img/rfid.png"
+                  class="walkthrough__image"
+                  alt="RFID"
+                />
+              </div>
+            </div>
+            <div class="col w-4/12 ml-1/12 ml-xs-0">
+              <div class="walkthrough__setUpPaymentsBackground">03</div>
+              <h3 class="walkthrough__h3">Entry & RFID</h3>
+              <p class="walkthrough__text mb-40">
+                Manage entry through our iOS and Android app. Take your event
+                cashless with our best-in-class solution.
+              </p>
+              <a href="#" class="walkthrough__cta"
+                >Explore features
+                <span class="btn_round"
+                  ><svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5645 3.34766L8.3584 6.55371V3.93555H0.517578V2.75293H8.3584L8.36523 0.141602L11.5645 3.34766Z"
+                      fill="#3B8EF9"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <div class="row mb-120">
+            <div class="col w-4/12 ml-1/12 ml-xs-0">
+              <div class="walkthrough__setUpPaymentsBackground">04</div>
+              <h3 class="walkthrough__h3">Support & Analysis</h3>
+              <p class="walkthrough__text mb-40">
+                Omni-channel support for your and your customers. Post event
+                in-sight, analysis and recommendations.
+              </p>
+              <a href="#" class="walkthrough__cta"
+                >Explore features
+                <span class="btn_round"
+                  ><svg
+                    width="14"
+                    height="8"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.5645 3.34766L8.3584 6.55371V3.93555H0.517578V2.75293H8.3584L8.36523 0.141602L11.5645 3.34766Z"
+                      fill="#3B8EF9"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="col w-6/12 ml-1/12 ml-xs-0">
+              <div class="walkthrough__img_container">
+                <img
+                  src="dist/img/analysis.png"
+                  class="walkthrough__image"
+                  alt="Analysis"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="clients">
+        <div class="container">
+          <div class="row">
+            <div class="col w-4/12 ml-1/12 ml-xs-0">
+              <h2 class="mb-30 mt-250 mt-xs-300">
+                <span class="outline_white">Our</span> Clients
+              </h2>
+              <p class="mb-50 opacity_80">
+                We’ve supported all kinds of events from large to small and we
+                can help yours too.
+              </p>
+            </div>
+            <div class="col w-2/12 ml-4/12 ml-xs-0">
+              <div class="slider-buttons mt-350 mt-xs-0 pt-50 mb-xs-30">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="slider mb-80 mb-xs-30">
+              <div class="swiper-container clientSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="carousel_category">Carnival</div>
+                    <div class="carousel_img_container mb-20">
+                      <img
+                        class="carousel_img"
+                        src="dist/img/carousel/aia-carnival.jpg"
+                        alt="Asia Carnival"
+                      />
+                      <img
+                        class="carousel_logo"
+                        src="dist/img/carousel/aia-carnival-logo.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="carousel_title w-6/12">AIA Carnival</div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="carousel_category">Carnival</div>
+                    <div class="carousel_img_container mb-20">
+                      <img
+                        class="carousel_img"
+                        src="dist/img/carousel/prudential-marina-bay.jpg"
+                        alt="APrudential Marina Bay Carnival"
+                      />
+                      <img
+                        class="carousel_logo"
+                        src="dist/img/carousel/prudential-marina-bay-logo.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="carousel_title w-6/12">
+                      Prudential Marina Bay Carnival
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="carousel_category">Circus</div>
+                    <div class="carousel_img_container mb-20">
+                      <img
+                        class="carousel_img"
+                        src="dist/img/carousel/the-great-circus-of-europe.jpg"
+                        alt="The Great Circus of Europe"
+                      />
+                      <img
+                        class="carousel_logo"
+                        src="dist/img/carousel/the-great-circus-of-europe-logo.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="carousel_title w-6/12">
+                      The Great Circus of Europe
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="carousel_category">Landmark</div>
+                    <div class="carousel_img_container mb-20">
+                      <img
+                        class="carousel_img"
+                        src="dist/img/carousel/hong-kong-overvation-wheel.jpg"
+                        alt="Hong Kong Observation Wheel"
+                      />
+                      <img
+                        class="carousel_logo"
+                        src="dist/img/carousel/hong-kong-overvation-wheel-logo.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="carousel_title w-6/12">
+                      Hong Kong Observation Wheel
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d_flex center mb-150 mb-xs-100">
+            <a href="#" class="btn btn_wide btn_view_all"
+              >View All Clients
+              <svg
+                class="btn_arrow"
+                width="14"
+                height="8"
+                viewBox="0 0 12 7"
+                fill=""
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.5645 3.34766L8.3584 6.55371V3.93555H0.517578V2.75293H8.3584L8.36523 0.141602L11.5645 3.34766Z"
+                  fill="#fff"
+                /></svg
+            ></a>
+          </div>
+
+          <div class="center">
+            <h2 class="mb-30">
+              <span class="outline_white">Try Zicket</span> Today
+            </h2>
+            <p class="mb-40 opacity_80">
+              Join thousands of other events planners and start selling tickets
+              to your event.
+            </p>
+            <div class="d_flex">
+              <a
+                href="#"
+                class="btn btn_white btn_outline_white mb-100 btn_wide"
+                >Sign up
+                <svg
+                  class="btn_arrow"
+                  width="14"
+                  height="8"
+                  viewBox="0 0 12 7"
+                  fill=""
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5645 3.34766L8.3584 6.55371V3.93555H0.517578V2.75293H8.3584L8.36523 0.141602L11.5645 3.34766Z"
+                    fill="#3b8ef9"
+                  /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="signup">
+        <div class="container pt-100">
+          <div class="row">
+            <div class="col w-3/12">
+              <h3>Stay up to date</h3>
+              <p class="mb-80 mb-xs-0">
+                Receive our latest news, announcements and offers.
+              </p>
+            </div>
+            <div class="col w-7/12 ml-2/12 ml-xs-0">
+              <form
+                action="/"
+                method="POST"
+                class="signup__form"
+              >
+                <div class="row">
+                  <div class="col w-8/12">
+                    <label for="email" class="sr_only"
+                      >Enter email address:</label
+                    ><input
+                      id="email"
+                      type="text"
+                      placeholder="jane.smith@example.com"
+                      class="mb-xs-10"
+                    /><span class="signup__form_error"></span><span class="signup__form_success"></span>
+                  </div>
+                  <div class="col w-3/12 ml-1/12 mb-xs-30 ml-xs-0">
+                    <button
+                      type="submit"
+                      class="btn btn_blue btn_outline_blue uppercase mt-xs-30"
+                      id="newsletterSubmit"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container pt-100  mb-40 ">
+        <div class="footer-links">
+        <div class="row">
+              <ul class="col w-2/12 w-xs-4/12">
+                <li>Product</li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Faqs</a></li>
+              </ul>
+              <ul class="col w-2/12 w-xs-4/12">
+                <li>About</li>
+                <li><a href="#">About Zicket</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <ul class="col w-2/12 w-xs-4/12">
+                <li>Legal</li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Security</a></li>
+              </ul>
+            <div class="col w-2/12 w-sm-3/12 w-lg-2/12 ml-auto w-xs-full mt-xs-30">            
+              <div class="d_flex">
+              <a href="#" class="btn btn_pink btn_outline_pink mb-30 mb-xs-30 mt-xs-30">Buy Tickets</a>
+            </div>
+            <p class="footer__buy_copy">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p></div>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
+            <hr class="footer__border mb-40"/>
+            <div class="row">
+              <div class="footer__bottom">
+                <a href="#" class="footer__social_icon" aria-label="Find us on Twitter"
+                ><svg
+                  width="10"
+                  height="19"
+                  viewBox="0 0 10 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.59731 9.4817H6.63121V19H2.13731V9.4817H0V6.13659H2.13731V3.97193C2.13731 2.42396 2.97677 0 6.67121 0L10 0.012199V3.2592H7.58475C7.18857 3.2592 6.6315 3.43258 6.6315 4.171V6.13971H9.98993L9.59731 9.4817Z"
+                    fill="#3B8EF9"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="footer__social_icon" aria-label="Check out our Instagram"
+                ><svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.4964 0C8.37415 0 7.98264 0.0132341 6.75643 0.0691825C5.53278 0.124994 4.69707 0.319353 3.96581 0.603567C3.20982 0.897319 2.5687 1.29042 1.92954 1.92954C1.29042 2.5687 0.897319 3.20982 0.603567 3.96581C0.319353 4.69707 0.124994 5.53278 0.0691825 6.75643C0.0132341 7.98264 0 8.37415 0 11.4964C0 14.6186 0.0132341 15.0101 0.0691825 16.2363C0.124994 17.46 0.319353 18.2957 0.603567 19.0269C0.897319 19.7829 1.29042 20.424 1.92954 21.0632C2.5687 21.7023 3.20982 22.0954 3.96581 22.3892C4.69707 22.6734 5.53278 22.8678 6.75643 22.9236C7.98264 22.9795 8.37415 22.9927 11.4964 22.9927C14.6186 22.9927 15.0101 22.9795 16.2363 22.9236C17.46 22.8678 18.2957 22.6734 19.0269 22.3892C19.7829 22.0954 20.424 21.7023 21.0632 21.0632C21.7023 20.424 22.0954 19.7829 22.3892 19.0269C22.6734 18.2957 22.8678 17.46 22.9236 16.2363C22.9795 15.0101 22.9927 14.6186 22.9927 11.4964C22.9927 8.37415 22.9795 7.98264 22.9236 6.75643C22.8678 5.53278 22.6734 4.69707 22.3892 3.96581C22.0954 3.20982 21.7023 2.5687 21.0632 1.92954C20.424 1.29042 19.7829 0.897319 19.0269 0.603567C18.2957 0.319353 17.46 0.124994 16.2363 0.0691825C15.0101 0.0132341 14.6186 0 11.4964 0ZM11.4964 2.07141C14.566 2.07141 14.9296 2.08314 16.1419 2.13845C17.2628 2.18956 17.8715 2.37685 18.2766 2.53429C18.8132 2.74284 19.1962 2.99196 19.5985 3.39428C20.0008 3.79655 20.2499 4.17952 20.4585 4.71614C20.6159 5.12124 20.8032 5.72997 20.8543 6.85085C20.9096 8.0631 20.9213 8.42672 20.9213 11.4964C20.9213 14.566 20.9096 14.9296 20.8543 16.1419C20.8032 17.2628 20.6159 17.8715 20.4585 18.2766C20.2499 18.8132 20.0008 19.1962 19.5985 19.5985C19.1962 20.0008 18.8132 20.2499 18.2766 20.4585C17.8715 20.6159 17.2628 20.8032 16.1419 20.8543C14.9298 20.9096 14.5663 20.9213 11.4964 20.9213C8.42649 20.9213 8.06296 20.9096 6.85085 20.8543C5.72997 20.8032 5.12124 20.6159 4.71614 20.4585C4.17952 20.2499 3.79655 20.0008 3.39428 19.5985C2.99201 19.1962 2.74284 18.8132 2.53429 18.2766C2.37685 17.8715 2.18956 17.2628 2.13845 16.1419C2.08314 14.9296 2.07141 14.566 2.07141 11.4964C2.07141 8.42672 2.08314 8.0631 2.13845 6.85085C2.18956 5.72997 2.37685 5.12124 2.53429 4.71614C2.74284 4.17952 2.99196 3.79655 3.39428 3.39428C3.79655 2.99196 4.17952 2.74284 4.71614 2.53429C5.12124 2.37685 5.72997 2.18956 6.85085 2.13845C8.0631 2.08314 8.42672 2.07141 11.4964 2.07141Z"
+                    fill="#7F3FD1"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12 15.8874C9.84898 15.8874 8.10526 14.1437 8.10526 11.9927C8.10526 9.84166 9.84898 8.09794 12 8.09794C14.151 8.09794 15.8947 9.84166 15.8947 11.9927C15.8947 14.1437 14.151 15.8874 12 15.8874ZM12 5.99268C8.68627 5.99268 6 8.67895 6 11.9927C6 15.3064 8.68627 17.9927 12 17.9927C15.3137 17.9927 18 15.3064 18 11.9927C18 8.67895 15.3137 5.99268 12 5.99268Z"
+                    fill="#7F3FD1"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19 5.4927C19 6.32114 18.3284 6.99268 17.5 6.99268C16.6716 6.99268 16 6.32114 16 5.4927C16 4.66427 16.6716 3.99268 17.5 3.99268C18.3284 3.99268 19 4.66427 19 5.4927Z"
+                    fill="#7F3FD1"
+                  />
+                </svg>
+              </a>
+              <p class="footer__copyright">&copy; Copyright 2019 Zicket</p>
+              </div>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- <script src="dist/js/main.bundle.js"></script> -->
+    <script src="dist/js/modal.js"></script>
+    <script src="dist/js/main.min.js"></script>
+  </body>
+</html>
