@@ -792,8 +792,7 @@ h3 {
   background-image: url("../../dist/img/hero.jpg");
   background-repeat: no-repeat;
   flex-shrink: 0;
-  min-height: 100vh; // 100% broke the layout when I added a doctype
-  height: 100%;
+  min-height: 100vh; 
   background-position: center;
   background-size: cover;
   position: relative;
@@ -893,6 +892,9 @@ h3 {
 @media screen and (min-width: 768px) {
   .hero__title {
     font-size: 4.375rem;  /* 70px; */
+  }
+  .hero {
+    height: 100vh;
   }
 
 }
