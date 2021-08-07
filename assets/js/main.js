@@ -8,7 +8,7 @@ var navOverlay = document.querySelector('.nav__overlay')
 // Unless we're at the top of page, use the sticky nav
 function switchToStickyNav() {
   nav.classList.add("nav__colored");
-  if (window.scrollY === 0 && !navOverlay.classList.contains('active')) { 
+  if (window.pageYOffset === 0 && !navOverlay.classList.contains('active')) { 
     nav.classList.remove("nav__colored")
   }
 }
@@ -78,7 +78,6 @@ function submitNewsletterForm() {
   };
 
   xhttp.onerror = function (e) {
-    console.log(e.target.status);
     errorMsg.innerHTML = "There was an issue submitting the form (check that the API is up!)";
     successMsg.classList.remove("d_block");
     errorMsg.classList.add("d_block");
