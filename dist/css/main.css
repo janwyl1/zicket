@@ -479,14 +479,23 @@ h5 {
 }
 
 h2 {
-  font-size: 3.125rem;
+  font-size: 2.25rem;
   line-height: 1;
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) { 
+  h2 {
+    font-sizee: 3.125rem;
+  }
+  h3 {
+    font-size: 1.625rem;
+  }
 }
 
 .btn {
@@ -1173,7 +1182,7 @@ h3 {
   position: absolute;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 3.75rem;
+  font-size: 3rem;
 }
 
 .walkthrough__cta {
@@ -1202,6 +1211,12 @@ h3 {
 
 .walkthrough__cta:hover .btn_round svg path {
   fill: #fff;
+}
+
+@media screen and (min-width: 768px) { 
+  .walkthrough__setUpPaymentsBackground {
+    font-size: 3.75rem;
+  } 
 }
 
 @media screen and (min-width: 1024px) { 
