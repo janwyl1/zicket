@@ -58,7 +58,7 @@
   position: absolute;
   font-family: $montserrat;
   font-weight: bold;
-  font-size: 3.75rem;
+  font-size: 3rem;
 }
 
 .walkthrough__cta {
@@ -89,6 +89,11 @@
   fill: $white;
 }
 
+@media screen and (min-width: 768px) { 
+  .walkthrough__setUpPaymentsBackground {
+    font-size: 3.75rem;
+  } 
+}
 
 @media screen and (min-width: 1024px) { 
   .walkthrough .row:first-child {
