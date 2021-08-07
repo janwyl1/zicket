@@ -1165,7 +1165,7 @@ h3 {
 }
 
 .walkthrough__setUpPaymentsBackground {
-  opacity: 10%;
+  opacity: 0.1;
   color: #3b8ef9;
   line-height: 90px;
   letter-spacing: -1.5px;

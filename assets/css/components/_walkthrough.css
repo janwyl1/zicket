@@ -50,7 +50,7 @@
 }
 
 .walkthrough__setUpPaymentsBackground {
-  opacity: 10%;
+  opacity: 0.1;
   color: $blue;
   line-height: 90px;
   letter-spacing: -1.5px;
