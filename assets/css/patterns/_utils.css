@@ -12,15 +12,13 @@
 }
 
 .outline_white {
-  color: transparent;
-  -webkit-text-stroke: 2px $white; 
-  /* // not ideal as doesnt support ie 11 */
+  -webkit-text-stroke: 2px $white;
+  -webkit-text-fill-color: transparent
 }
 
 .outline_blue {
-  color: transparent;
   -webkit-text-stroke: 2px $blue; 
-  /* // not ideal as doesnt support ie 11 */
+  -webkit-text-fill-color: transparent
 }
 
 .opacity_80 {

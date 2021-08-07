@@ -1466,14 +1466,14 @@ h3 {
 }
 
 .outline_white {
-  color: transparent;
-  -webkit-text-stroke: 2px #fff; 
+  -webkit-text-stroke: 2px #fff;
+  -webkit-text-fill-color: transparent
   /* // not ideal as doesnt support ie 11 */
 }
 
 .outline_blue {
-  color: transparent;
   -webkit-text-stroke: 2px #3b8ef9; 
+  -webkit-text-fill-color: transparent
   /* // not ideal as doesnt support ie 11 */
 }
 
