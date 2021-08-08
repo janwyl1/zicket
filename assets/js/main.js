@@ -52,7 +52,7 @@ function submitNewsletterForm() {
     true
   );
 
-  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.setRequestHeader("Content-Type", "application/json");
 
   xhttp.send(
     JSON.stringify({
