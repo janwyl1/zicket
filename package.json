@@ -17,14 +17,7 @@
     "watch:js": "watch 'npm run js' ./assets/js",
     "watch": "parallelshell 'npm run watch:css' 'npm run watch:js'",
     "build": "npm run createDist && parallelshell 'npm run css' 'npm run js' 'npm run copyImg' 'npm run createBuild' && npm run copyToBuild",
-    "deploy": "git subtree push --prefix build origin gh-pages",
-    "babel": "babel ./dist/js -d lib"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "minify"
-    ]
+    "deploy": "git subtree push --prefix build origin gh-pages"
   },
   "author": "James Anwyl",
   "license": "ISC",
