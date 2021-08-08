@@ -5,8 +5,9 @@
   "scripts": {
     "css": "postcss assets/css/main.css -o dist/css/main.css",
     "js": "uglifyjs ./assets/js/modal.js ./assets/js/main.js -o ./dist/js/main.min.js",
-    "copyImg": "cp -R ./assets/img ./dist/",
     "html": "cp ./index.html ./build/index.html",
+    "copyImg": "cp -R ./assets/img ./dist/",
+    "copyFonts": "cp -R ./assets/fonts ./dist",
     "deleteDist": "rimraf ./dist",
     "createDist": "npm run deleteDist && mkdir dist && mkdir dist/js && mkdir dist/css && mkdir dist/img",
     "deleteBuild": "rimraf ./build",
@@ -16,7 +17,7 @@
     "watch:css": "watch 'npm run css' ./assets/css",
     "watch:js": "watch 'npm run js' ./assets/js",
     "watch": "parallelshell 'npm run watch:css' 'npm run watch:js'",
-    "build": "npm run createDist && parallelshell 'npm run css' 'npm run js' 'npm run copyImg' 'npm run createBuild' && npm run copyToBuild",
+    "build": "npm run createDist && parallelshell 'npm run css' 'npm run js' 'npm run copyImg' 'npm run copyFonts' 'npm run createBuild' && npm run copyToBuild",
     "deploy": "git subtree push --prefix build origin gh-pages"
   },
   "author": "James Anwyl",

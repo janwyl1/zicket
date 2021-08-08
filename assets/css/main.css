@@ -1,7 +1,7 @@
 @import "patterns/_reset.css";
 
+@import "patterns/_fonts.css";
 @import "patterns/_dimensions.css";
-
 @import "patterns/_colors.css";
 @import "patterns/_typography.css";
 @import "patterns/_buttons.css";
