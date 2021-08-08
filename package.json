@@ -4,7 +4,7 @@
   "description": "Frontend training site",
   "scripts": {
     "css": "postcss assets/css/main.css -o dist/css/main.css",
-    "js": "uglifyjs ./assets/js/modal.js ./assets/js/main.js -o ./dist/js/main.min.js",
+    "js": "uglifyjs ./assets/js/modal.js ./assets/js/swiper@6.8.1.min.js ./assets/js/main.js -o ./dist/js/main.min.js",
     "html": "cp ./index.html ./build/index.html",
     "copyImg": "cp -R ./assets/img ./dist/",
     "copyFonts": "cp -R ./assets/fonts ./dist",

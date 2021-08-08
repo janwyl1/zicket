@@ -1,5 +1,7 @@
 @import "patterns/_reset.css";
 
+@import "vendor/swiper-bundle.min.css";
+
 @import "patterns/_fonts.css";
 @import "patterns/_dimensions.css";
 @import "patterns/_colors.css";
