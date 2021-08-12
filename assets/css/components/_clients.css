@@ -5,7 +5,7 @@
   color: $white;
 }
 /* Create the triangle corner effect using the border trick with 100vw */
-.clients::before {
+/* .clients::before {
   content: "";
   width: 0;
   height: 0;
@@ -15,4 +15,4 @@
   right: 0;
   top: 0;
   position: absolute;
-}
+} */

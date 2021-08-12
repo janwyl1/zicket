@@ -1,3 +1,9 @@
+.walkthrough {
+  position: relative;
+  padding-bottom: 120px;
+  padding-top: 120px;
+  z-index: 1;
+}
 .walkthrough .row {
   align-items: center;
 }
@@ -89,6 +95,23 @@
   fill: $white;
 }
 
+/* Create the triangle corner effect using the border trick with 100vw */
+.walkthrough::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 20vw 40px;
+  border-color: transparent $white transparent transparent;
+  right: 0;
+  top: 100%;
+  /* transform: translateY(100%); */
+  position: absolute;
+}
+
+
+
+
 @media screen and (min-width: 768px) { 
   .walkthrough__setUpPaymentsBackground {
     font-size: 3.75rem;
@@ -103,3 +126,5 @@
     max-width: 400px;
    }
 }
+
+
