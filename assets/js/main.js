@@ -35,6 +35,7 @@ var swiper = new Swiper(".clientSwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  slideToClickedSlide: true
 });
 
 // Send Mail
