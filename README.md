@@ -4,6 +4,9 @@
 
 Frontend training site for Parallax 
 
+Hosted on github pages: https://janwyl1.github.io/zicket/
+
+
 ## Instructions
 
 Download source files and run:
@@ -20,7 +23,6 @@ Generate build:
 
 Deploy build folder to gh-pages:
 `npm run deploy`
-
 
 ## Resources
 
