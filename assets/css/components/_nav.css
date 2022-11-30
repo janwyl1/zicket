@@ -96,7 +96,7 @@
 .nav__colored {
   border-bottom: 1px solid $blue-gray;
   background-color: $white;
-  margin-top: -42px;
+  margin-top: -44px;
 }
 
 .nav__colored .nav__zicket_logo svg path {
